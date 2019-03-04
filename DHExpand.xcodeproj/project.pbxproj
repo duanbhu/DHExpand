@@ -90,7 +90,7 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		8E74F134222CFCF1001E2A15 /* displayTime */ = {
+		8E74F134222CFCF1001E2A15 /* DisplayTime */ = {
 			isa = PBXGroup;
 			children = (
 				8E74F130222CFB04001E2A15 /* NSDate+DH.h */,
@@ -98,7 +98,18 @@
 				8E74F12F222CFB04001E2A15 /* NSString+Time.h */,
 				8E74F131222CFB04001E2A15 /* NSString+Time.m */,
 			);
-			path = displayTime;
+			path = DisplayTime;
+			sourceTree = "<group>";
+		};
+		8E74F135222D016F001E2A15 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				8E7CF7562227B95C00B56006 /* UIViewController+DHAlert.h */,
+				8E7CF7572227B95C00B56006 /* UIViewController+DHAlert.m */,
+				8E7CF7592227C29300B56006 /* UIButton+VerificationCode.h */,
+				8E7CF75A2227C29300B56006 /* UIButton+VerificationCode.m */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 		8E7CF7142227B4D000B56006 = {
@@ -159,11 +170,8 @@
 		8E7CF7552227B95C00B56006 /* classes */ = {
 			isa = PBXGroup;
 			children = (
-				8E74F134222CFCF1001E2A15 /* displayTime */,
-				8E7CF7562227B95C00B56006 /* UIViewController+DHAlert.h */,
-				8E7CF7572227B95C00B56006 /* UIViewController+DHAlert.m */,
-				8E7CF7592227C29300B56006 /* UIButton+VerificationCode.h */,
-				8E7CF75A2227C29300B56006 /* UIButton+VerificationCode.m */,
+				8E74F135222D016F001E2A15 /* Common */,
+				8E74F134222CFCF1001E2A15 /* DisplayTime */,
 			);
 			path = classes;
 			sourceTree = SOURCE_ROOT;

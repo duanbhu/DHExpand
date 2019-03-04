@@ -2,7 +2,7 @@
 //  UIButton+VerificationCode.h
 //  DHXuanWuJi
 //
-//  Created by bangju on 2019/2/28.
+//  Created by duan on 2018/3/29.
 //  Copyright © 2019年 duan. All rights reserved.
 //
 
