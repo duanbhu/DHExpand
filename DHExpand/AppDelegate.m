@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "DHUpdateApp.h"
+
 
 @interface AppDelegate ()
 
@@ -17,6 +19,16 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    _window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    _window.backgroundColor = [UIColor whiteColor];
+    
+    UIViewController *vc = [[UIViewController alloc] init];
+    _window.rootViewController = vc;
+    
+    [_window makeKeyAndVisible];
+    
+    [DHUpdateApp dh_checkForUpdatesWithAPPID:@"1378780846"];
     return YES;
 }
 
@@ -30,6 +42,7 @@
 - (void)applicationDidEnterBackground:(UIApplication *)application {
     // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+    
 }
 
 
