@@ -8,7 +8,7 @@
 
 #import "AppDelegate.h"
 #import "DHUpdateApp.h"
-
+#import "DHViewController.h"
 
 @interface AppDelegate ()
 
@@ -23,7 +23,7 @@
     _window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     _window.backgroundColor = [UIColor whiteColor];
     
-    UIViewController *vc = [[UIViewController alloc] init];
+    DHViewController *vc = [[DHViewController alloc] init];
     _window.rootViewController = vc;
     
     [_window makeKeyAndVisible];

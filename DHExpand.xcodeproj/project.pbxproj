@@ -11,12 +11,13 @@
 		8E74F133222CFB04001E2A15 /* NSString+Time.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E74F131222CFB04001E2A15 /* NSString+Time.m */; };
 		8E7CF7222227B4D000B56006 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E7CF7212227B4D000B56006 /* AppDelegate.m */; };
 		8E7CF72A2227B4D200B56006 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E7CF7292227B4D200B56006 /* Assets.xcassets */; };
-		8E7CF72D2227B4D200B56006 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E7CF72B2227B4D200B56006 /* LaunchScreen.storyboard */; };
 		8E7CF7302227B4D200B56006 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E7CF72F2227B4D200B56006 /* main.m */; };
 		8E7CF73A2227B4D200B56006 /* DHExpandTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E7CF7392227B4D200B56006 /* DHExpandTests.m */; };
 		8E7CF7452227B4D200B56006 /* DHExpandUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E7CF7442227B4D200B56006 /* DHExpandUITests.m */; };
 		8E7CF7582227B95C00B56006 /* UIViewController+DHAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E7CF7572227B95C00B56006 /* UIViewController+DHAlert.m */; };
-		8E7CF75B2227C29300B56006 /* UIButton+VerificationCode.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E7CF75A2227C29300B56006 /* UIButton+VerificationCode.m */; };
+		8E7E2D312238DFD800AD7B24 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E7E2D302238DFD800AD7B24 /* Launch Screen.storyboard */; };
+		8E7E2D342238E01A00AD7B24 /* DHViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E7E2D332238E01A00AD7B24 /* DHViewController.m */; };
+		8E7E2D352238E2A100AD7B24 /* UIButton+VerificationCode.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E7CF75A2227C29300B56006 /* UIButton+VerificationCode.m */; };
 		8E7F034922360DC400A70E10 /* DHUpdateApp.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E7F034822360DC400A70E10 /* DHUpdateApp.m */; };
 /* End PBXBuildFile section */
 
@@ -46,7 +47,6 @@
 		8E7CF7202227B4D000B56006 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8E7CF7212227B4D000B56006 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		8E7CF7292227B4D200B56006 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		8E7CF72C2227B4D200B56006 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8E7CF72E2227B4D200B56006 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8E7CF72F2227B4D200B56006 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8E7CF7352227B4D200B56006 /* DHExpandTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DHExpandTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -61,7 +61,10 @@
 		8E7CF75A2227C29300B56006 /* UIButton+VerificationCode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+VerificationCode.m"; sourceTree = "<group>"; };
 		8E7E2D2A2238D4C400AD7B24 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 		8E7E2D2B2238D4C400AD7B24 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = SOURCE_ROOT; };
-		8E7E2D2E2238D93200AD7B24 /* DHExpand.podspec */ = {isa = PBXFileReference; explicitFileType = text; fileEncoding = 2483028224; name = DHExpand.podspec; path = ../DHExpand.podspec; sourceTree = "<group>"; };
+		8E7E2D2E2238D93200AD7B24 /* DHExpand.podspec */ = {isa = PBXFileReference; explicitFileType = text.css; fileEncoding = 2483028224; name = DHExpand.podspec; path = ../DHExpand.podspec; sourceTree = "<group>"; };
+		8E7E2D302238DFD800AD7B24 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		8E7E2D322238E01A00AD7B24 /* DHViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DHViewController.h; sourceTree = "<group>"; };
+		8E7E2D332238E01A00AD7B24 /* DHViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DHViewController.m; sourceTree = "<group>"; };
 		8E7F034722360DC400A70E10 /* DHUpdateApp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DHUpdateApp.h; sourceTree = "<group>"; };
 		8E7F034822360DC400A70E10 /* DHUpdateApp.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DHUpdateApp.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -137,9 +140,11 @@
 				8E7CF7552227B95C00B56006 /* classes */,
 				8E7CF7202227B4D000B56006 /* AppDelegate.h */,
 				8E7CF7212227B4D000B56006 /* AppDelegate.m */,
+				8E7E2D322238E01A00AD7B24 /* DHViewController.h */,
+				8E7E2D332238E01A00AD7B24 /* DHViewController.m */,
 				8E7CF7292227B4D200B56006 /* Assets.xcassets */,
-				8E7CF72B2227B4D200B56006 /* LaunchScreen.storyboard */,
 				8E7CF72E2227B4D200B56006 /* Info.plist */,
+				8E7E2D302238DFD800AD7B24 /* Launch Screen.storyboard */,
 				8E7CF72F2227B4D200B56006 /* main.m */,
 				8E7E2D292238D4AE00AD7B24 /* Podspec Metadata */,
 			);
@@ -306,7 +311,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8E7CF72D2227B4D200B56006 /* LaunchScreen.storyboard in Resources */,
+				8E7E2D312238DFD800AD7B24 /* Launch Screen.storyboard in Resources */,
 				8E7CF72A2227B4D200B56006 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -332,8 +337,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E7E2D342238E01A00AD7B24 /* DHViewController.m in Sources */,
+				8E7E2D352238E2A100AD7B24 /* UIButton+VerificationCode.m in Sources */,
 				8E7F034922360DC400A70E10 /* DHUpdateApp.m in Sources */,
-				8E7CF75B2227C29300B56006 /* UIButton+VerificationCode.m in Sources */,
 				8E74F133222CFB04001E2A15 /* NSString+Time.m in Sources */,
 				8E7CF7582227B95C00B56006 /* UIViewController+DHAlert.m in Sources */,
 				8E7CF7302227B4D200B56006 /* main.m in Sources */,
@@ -372,17 +378,6 @@
 			targetProxy = 8E7CF7412227B4D200B56006 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		8E7CF72B2227B4D200B56006 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8E7CF72C2227B4D200B56006 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		8E7CF7472227B4D200B56006 /* Debug */ = {
