@@ -26,7 +26,7 @@
     __block NSString *currentVersion = infoDic[@"CFBundleShortVersionString"];
     NSURLRequest *request;
     
-    if (!appId) {
+    if (!appId || [appId isEqualToString:@""]) {
         // 需要填写appID
         return ;
     }
@@ -97,12 +97,12 @@
         if (current_i_tmp < store_i_tmp) {
             return YES ;
         }
+        // 当前位数相同，跳出当前循环，比较下一位
         else if (current_i_tmp == store_i_tmp) {
-            // 当前位数相同，跳出当前循环，比较下一位
             continue;
         }
+        // 当前版本大于商店版本，不需要更新
         else {
-            // 当前版本大于商店版本，不需要更新
             return NO ;
         }
     }
@@ -121,7 +121,7 @@
     }];
 }
 
-// 启动App Store 更新软件
+// 打开App Store 更新软件
 + (void)launchAppStoreWithITunesString:(NSString *) iTunesString {
     
     NSURL *iTunesURL = [NSURL URLWithString:iTunesString];

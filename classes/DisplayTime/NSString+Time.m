@@ -46,12 +46,12 @@
         fmt.dateFormat = @"昨天 HH:mm:ss";
         return [fmt stringFromDate:createdAtDate];
         
-    } else if (createdAtDate.isThisYear){
+    } else if (createdAtDate.isThisYear) {
         // 今年
         fmt.dateFormat = @"MM-dd HH:mm";
         return [fmt stringFromDate:createdAtDate];
     }
-    else{
+    else {
         // 其他
         fmt.dateFormat = @"yyyy-MM-dd";
         return [fmt stringFromDate:createdAtDate];

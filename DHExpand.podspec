@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
     s.name         = "DHExpand"
     s.version      = "1.0.1"
     s.ios.deployment_target = '8.0'
-    s.summary      = "简介"
+    s.summary      = "一些常用的，系统的弹出框封装、时间戳格式化、app更新提示、按钮获取验证码的倒计时"
     s.homepage     = "https://github.com/duanHuing/DHExpand"
     s.license      = "MIT"
     # s.license    = { :type => "MIT", :file => "FILE_LICENSE" }
@@ -25,6 +25,10 @@ Pod::Spec.new do |s|
 
     s.subspec 'DisplayTime' do |displayTime|
         displayTime.source_files = 'Classes/DisplayTime/**/*'
+    end
+
+    s.subspec 'VerificationCode' do |v|
+        v = 'Classes/VerificationCode/**/*'
     end
 
 end

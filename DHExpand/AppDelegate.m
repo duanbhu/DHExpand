@@ -28,7 +28,7 @@
     
     [_window makeKeyAndVisible];
     
-    [DHUpdateApp dh_checkForUpdatesWithAPPID:@"1378780846"];
+    [DHUpdateApp dh_checkForUpdatesWithAPPID:@"apple id"];
     return YES;
 }
 

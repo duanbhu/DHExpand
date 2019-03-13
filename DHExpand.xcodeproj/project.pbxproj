@@ -17,6 +17,7 @@
 		8E7CF7452227B4D200B56006 /* DHExpandUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E7CF7442227B4D200B56006 /* DHExpandUITests.m */; };
 		8E7CF7582227B95C00B56006 /* UIViewController+DHAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E7CF7572227B95C00B56006 /* UIViewController+DHAlert.m */; };
 		8E7CF75B2227C29300B56006 /* UIButton+VerificationCode.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E7CF75A2227C29300B56006 /* UIButton+VerificationCode.m */; };
+		8E7E2D282238CD8700AD7B24 /* DHExpand.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 8E7E2D272238CD8700AD7B24 /* DHExpand.podspec */; };
 		8E7F034922360DC400A70E10 /* DHUpdateApp.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E7F034822360DC400A70E10 /* DHUpdateApp.m */; };
 /* End PBXBuildFile section */
 
@@ -59,6 +60,7 @@
 		8E7CF7572227B95C00B56006 /* UIViewController+DHAlert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+DHAlert.m"; sourceTree = "<group>"; };
 		8E7CF7592227C29300B56006 /* UIButton+VerificationCode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+VerificationCode.h"; sourceTree = "<group>"; };
 		8E7CF75A2227C29300B56006 /* UIButton+VerificationCode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+VerificationCode.m"; sourceTree = "<group>"; };
+		8E7E2D272238CD8700AD7B24 /* DHExpand.podspec */ = {isa = PBXFileReference; explicitFileType = text.css; fileEncoding = 4; path = DHExpand.podspec; sourceTree = SOURCE_ROOT; };
 		8E7F034722360DC400A70E10 /* DHUpdateApp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DHUpdateApp.h; sourceTree = "<group>"; };
 		8E7F034822360DC400A70E10 /* DHUpdateApp.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DHUpdateApp.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -104,10 +106,6 @@
 			children = (
 				8E7CF7562227B95C00B56006 /* UIViewController+DHAlert.h */,
 				8E7CF7572227B95C00B56006 /* UIViewController+DHAlert.m */,
-				8E7CF7592227C29300B56006 /* UIButton+VerificationCode.h */,
-				8E7CF75A2227C29300B56006 /* UIButton+VerificationCode.m */,
-				8E7F034722360DC400A70E10 /* DHUpdateApp.h */,
-				8E7F034822360DC400A70E10 /* DHUpdateApp.m */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -142,6 +140,7 @@
 				8E7CF72B2227B4D200B56006 /* LaunchScreen.storyboard */,
 				8E7CF72E2227B4D200B56006 /* Info.plist */,
 				8E7CF72F2227B4D200B56006 /* main.m */,
+				8E7E2D272238CD8700AD7B24 /* DHExpand.podspec */,
 			);
 			path = DHExpand;
 			sourceTree = "<group>";
@@ -168,10 +167,30 @@
 			isa = PBXGroup;
 			children = (
 				8E74F135222D016F001E2A15 /* Common */,
+				8E7E2D262238CB3500AD7B24 /* UpdateApp */,
+				8E7E2D252238CA7700AD7B24 /* VerificationCode */,
 				8E74F134222CFCF1001E2A15 /* DisplayTime */,
 			);
 			path = classes;
 			sourceTree = SOURCE_ROOT;
+		};
+		8E7E2D252238CA7700AD7B24 /* VerificationCode */ = {
+			isa = PBXGroup;
+			children = (
+				8E7CF7592227C29300B56006 /* UIButton+VerificationCode.h */,
+				8E7CF75A2227C29300B56006 /* UIButton+VerificationCode.m */,
+			);
+			path = VerificationCode;
+			sourceTree = "<group>";
+		};
+		8E7E2D262238CB3500AD7B24 /* UpdateApp */ = {
+			isa = PBXGroup;
+			children = (
+				8E7F034722360DC400A70E10 /* DHUpdateApp.h */,
+				8E7F034822360DC400A70E10 /* DHUpdateApp.m */,
+			);
+			path = UpdateApp;
+			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
@@ -277,6 +296,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8E7CF72D2227B4D200B56006 /* LaunchScreen.storyboard in Resources */,
+				8E7E2D282238CD8700AD7B24 /* DHExpand.podspec in Resources */,
 				8E7CF72A2227B4D200B56006 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
