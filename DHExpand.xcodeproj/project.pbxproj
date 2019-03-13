@@ -17,9 +17,9 @@
 		8E7CF7452227B4D200B56006 /* DHExpandUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E7CF7442227B4D200B56006 /* DHExpandUITests.m */; };
 		8E7CF7582227B95C00B56006 /* UIViewController+DHAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E7CF7572227B95C00B56006 /* UIViewController+DHAlert.m */; };
 		8E7CF75B2227C29300B56006 /* UIButton+VerificationCode.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E7CF75A2227C29300B56006 /* UIButton+VerificationCode.m */; };
-		8E7E2D282238CD8700AD7B24 /* DHExpand.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 8E7E2D272238CD8700AD7B24 /* DHExpand.podspec */; };
 		8E7E2D2C2238D4C400AD7B24 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 8E7E2D2A2238D4C400AD7B24 /* README.md */; };
 		8E7E2D2D2238D4C400AD7B24 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 8E7E2D2B2238D4C400AD7B24 /* LICENSE */; };
+		8E7E2D2F2238D93200AD7B24 /* DHExpand.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 8E7E2D2E2238D93200AD7B24 /* DHExpand.podspec */; };
 		8E7F034922360DC400A70E10 /* DHUpdateApp.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E7F034822360DC400A70E10 /* DHUpdateApp.m */; };
 /* End PBXBuildFile section */
 
@@ -62,9 +62,9 @@
 		8E7CF7572227B95C00B56006 /* UIViewController+DHAlert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+DHAlert.m"; sourceTree = "<group>"; };
 		8E7CF7592227C29300B56006 /* UIButton+VerificationCode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+VerificationCode.h"; sourceTree = "<group>"; };
 		8E7CF75A2227C29300B56006 /* UIButton+VerificationCode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+VerificationCode.m"; sourceTree = "<group>"; };
-		8E7E2D272238CD8700AD7B24 /* DHExpand.podspec */ = {isa = PBXFileReference; explicitFileType = text.css; fileEncoding = 4; name = DHExpand.podspec; path = DHExpand/DHExpand.podspec; sourceTree = SOURCE_ROOT; };
 		8E7E2D2A2238D4C400AD7B24 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 		8E7E2D2B2238D4C400AD7B24 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = SOURCE_ROOT; };
+		8E7E2D2E2238D93200AD7B24 /* DHExpand.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = DHExpand.podspec; sourceTree = SOURCE_ROOT; };
 		8E7F034722360DC400A70E10 /* DHUpdateApp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DHUpdateApp.h; sourceTree = "<group>"; };
 		8E7F034822360DC400A70E10 /* DHUpdateApp.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DHUpdateApp.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -199,7 +199,7 @@
 		8E7E2D292238D4AE00AD7B24 /* Podspec Metadata */ = {
 			isa = PBXGroup;
 			children = (
-				8E7E2D272238CD8700AD7B24 /* DHExpand.podspec */,
+				8E7E2D2E2238D93200AD7B24 /* DHExpand.podspec */,
 				8E7E2D2B2238D4C400AD7B24 /* LICENSE */,
 				8E7E2D2A2238D4C400AD7B24 /* README.md */,
 			);
@@ -309,8 +309,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E7E2D2F2238D93200AD7B24 /* DHExpand.podspec in Resources */,
 				8E7CF72D2227B4D200B56006 /* LaunchScreen.storyboard in Resources */,
-				8E7E2D282238CD8700AD7B24 /* DHExpand.podspec in Resources */,
 				8E7E2D2C2238D4C400AD7B24 /* README.md in Resources */,
 				8E7CF72A2227B4D200B56006 /* Assets.xcassets in Resources */,
 				8E7E2D2D2238D4C400AD7B24 /* LICENSE in Resources */,
