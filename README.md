@@ -1,8 +1,10 @@
 # DHExpand
 
-常用分类 系统弹出框，获取验证码按钮的倒计时，时间戳转化时间字符串
+一些常用的代码，UIAlertController封装、时间戳格式化、app更新提示、按钮获取验证码的倒计时
 
 ```objc
 pod 'DHExpand'
 pod 'DHExpand/DisplayTime'
+pod 'DHExpand/VerificationCode'
+pod 'DHExpand/UpdateApp'
 ```
