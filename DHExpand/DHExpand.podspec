@@ -19,20 +19,20 @@ Pod::Spec.new do |s|
     s.requires_arc = true
     s.default_subspec = 'Common'
 
-    s.subspec 'Common' do |common|
-        common.source_files = 'Classes/Common/**/*'
+    s.subspec 'Common' do |ss|
+        ss.source_files = 'Classes/Common/**/*'
     end
 
-    s.subspec 'DisplayTime' do |displayTime|
-        displayTime.source_files = 'Classes/DisplayTime/**/*'
+    s.subspec 'DisplayTime' do |ss|
+        ss.source_files = 'Classes/DisplayTime/**/*'
     end
 
-    s.subspec 'VerificationCode' do |v|
-        v = 'Classes/VerificationCode/**/*'
+    s.subspec 'VerificationCode' do |ss|
+        ss = 'Classes/VerificationCode/**/*'
     end
 
-    s.subspec 'UpdateApp' do |u|
-        u = 'Classes/UpdateApp/**/*'
+    s.subspec 'UpdateApp' do |ss|
+        ss = 'Classes/UpdateApp/**/*'
     end
 
 end
