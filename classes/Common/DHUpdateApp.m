@@ -56,15 +56,9 @@
             NSDictionary *infoDict = appInfoDic[@"results"][0] ;
             NSString *appStoreVersion = infoDict[@"version"];
             
-            if([self isUpdateWithCurrentVerson:currentVersion storeVerson:appStoreVersion]) {
-                // 需要更新
-                if (completion) {
-                    completion(currentVersion,appStoreVersion,infoDict[@"trackViewUrl"],YES);
-                }
-            } else {
-                if (completion) {
-                    completion(currentVersion,appStoreVersion,infoDict[@"trackViewUrl"],NO);
-                }
+            BOOL isUpdate = [self isUpdateWithCurrentVerson:currentVersion storeVerson:appStoreVersion];
+            if (completion) {
+                completion(currentVersion,appStoreVersion,infoDict[@"trackViewUrl"],isUpdate);
             }
         });
     }];
@@ -98,19 +92,21 @@
         if (i < storeArr.count) {
             store_i_tmp = [storeArr[i] integerValue];
         }
+        
+        // 当前版本小于商店版本，需要更新
         if (current_i_tmp < store_i_tmp) {
-            //NSLog(@"%@ < %@",currentVersion,storeVersion);
             return YES ;
         }
         else if (current_i_tmp == store_i_tmp) {
+            // 当前位数相同，跳出当前循环，比较下一位
             continue;
         }
         else {
-            //NSLog(@"%@ > %@",currentVersion,storeVersion);
+            // 当前版本大于商店版本，不需要更新
             return NO ;
         }
     }
-    //NSLog(@"%@ = %@",currentVersion,storeVersion);
+    // 当前版本和商店版本一样
     return NO ;
 }
 
@@ -129,7 +125,6 @@
 + (void)launchAppStoreWithITunesString:(NSString *) iTunesString {
     
     NSURL *iTunesURL = [NSURL URLWithString:iTunesString];
-    
     dispatch_async(dispatch_get_main_queue(), ^{
         if (@available(iOS 10.0, *)) {
             [[UIApplication sharedApplication] openURL:iTunesURL options:@{} completionHandler:nil];
@@ -147,16 +142,11 @@
     while (true) {
         if (topViewController.presentedViewController) {
             topViewController = topViewController.presentedViewController;
-            
         } else if ([topViewController isKindOfClass:[UINavigationController class]] && [(UINavigationController*)topViewController topViewController]) {
-            
             topViewController = [(UINavigationController *)topViewController topViewController];
-            
         } else if ([topViewController isKindOfClass:[UITabBarController class]]) {
-            
             UITabBarController *tab = (UITabBarController *)topViewController;
             topViewController = tab.selectedViewController;
-            
         } else {
             break;
         }

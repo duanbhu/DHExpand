@@ -14,6 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 /**
  与当前时间比较来决定显示什么
+ 
  @return 与当前时间比较来决定显示什么
  */
 - (NSString *)dh_displayTime;
@@ -38,9 +39,17 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  获取当前系统时间（时间戳 以毫秒为单位）
 
- @return 13 时间戳
+ @return 13位 时间戳
  */
 + (NSString *)dh_getCurrentTimestamp;
+
+/**
+ 将秒转换成时分秒
+ 
+ @param totalSeconds 秒
+ @return 1:32:52
+ */
++ (NSString *)dh_formattedSeconds:(int)totalSeconds ;
 
 @end
 

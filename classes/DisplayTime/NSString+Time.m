@@ -47,17 +47,15 @@
         return [fmt stringFromDate:createdAtDate];
         
     } else if (createdAtDate.isThisYear){
-        //今年
+        // 今年
         fmt.dateFormat = @"MM-dd HH:mm";
-        
         return [fmt stringFromDate:createdAtDate];
     }
     else{
-        //其他
+        // 其他
         fmt.dateFormat = @"yyyy-MM-dd";
         return [fmt stringFromDate:createdAtDate];
     }
-    
 }
 
 #pragma mark - 时间戳转化为时间字符串
@@ -88,21 +86,20 @@
 
 //获取当前时间戳(以毫秒为单位)
 + (NSString *)dh_getCurrentTimestamp {
-   /* NSDateFormatter *formatter = [[NSDateFormatter alloc] init] ;
-    [formatter setDateStyle:NSDateFormatterMediumStyle];
-    [formatter setTimeStyle:NSDateFormatterShortStyle];
-    [formatter setDateFormat:@"YYYY-MM-dd HH:mm:ss"]; // ----------设置你想要的格式,hh与HH的区别:分别表示12小时制,24小时制
-    //设置时区,这个对于时间的处理有时很重要
-    NSTimeZone* timeZone = [NSTimeZone timeZoneWithName:@"Asia/Shanghai"];
-    [formatter setTimeZone:timeZone];*/
-    NSDate *datenow = [NSDate date];//现在时间,你可以输出来看下是什么格式
+    
+    NSDate *datenow = [NSDate date];
     NSString *timeSp = [NSString stringWithFormat:@"%ld", (long)[datenow timeIntervalSince1970] * 1000];
     
     return timeSp;
 }
 
-//将秒转换成时分秒
-+ (NSString *)timeFormatted:(int)totalSeconds {
+/**
+ 将秒转换成时分秒
+
+ @param totalSeconds 秒
+ @return 1:32:52
+ */
++ (NSString *)dh_formattedSeconds:(int)totalSeconds {
     int seconds = totalSeconds % 60;
     int minutes = (totalSeconds / 60) % 60;
     int hours = totalSeconds / 3600;
