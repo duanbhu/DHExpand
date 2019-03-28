@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2787A256DB481718C72960FA /* libPods-DHExpand.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4080F30C638C0B1668A9267D /* libPods-DHExpand.a */; };
+		8E49584C224B22C5003C4F25 /* UIButton+DH.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E49584B224B22C5003C4F25 /* UIButton+DH.m */; };
+		8E495858224B6ACA003C4F25 /* UILabel+DH.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E495857224B6ACA003C4F25 /* UILabel+DH.m */; };
+		8E4F2738224C627C00A77117 /* MBProgressHUD+DH.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E4F2737224C627C00A77117 /* MBProgressHUD+DH.m */; };
 		8E74F132222CFB04001E2A15 /* NSDate+DH.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E74F12E222CFB04001E2A15 /* NSDate+DH.m */; };
 		8E74F133222CFB04001E2A15 /* NSString+Time.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E74F131222CFB04001E2A15 /* NSString+Time.m */; };
 		8E7CF7222227B4D000B56006 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E7CF7212227B4D000B56006 /* AppDelegate.m */; };
@@ -39,6 +43,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4080F30C638C0B1668A9267D /* libPods-DHExpand.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DHExpand.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8024510BAAE713C79B8361E8 /* Pods-DHExpand.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DHExpand.release.xcconfig"; path = "Target Support Files/Pods-DHExpand/Pods-DHExpand.release.xcconfig"; sourceTree = "<group>"; };
+		8DBCB6E9EAACFA81E6B451F7 /* Pods-DHExpand.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DHExpand.debug.xcconfig"; path = "Target Support Files/Pods-DHExpand/Pods-DHExpand.debug.xcconfig"; sourceTree = "<group>"; };
+		8E49584A224B22C5003C4F25 /* UIButton+DH.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+DH.h"; sourceTree = "<group>"; };
+		8E49584B224B22C5003C4F25 /* UIButton+DH.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+DH.m"; sourceTree = "<group>"; };
+		8E495856224B6ACA003C4F25 /* UILabel+DH.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UILabel+DH.h"; sourceTree = "<group>"; };
+		8E495857224B6ACA003C4F25 /* UILabel+DH.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UILabel+DH.m"; sourceTree = "<group>"; };
+		8E4F2736224C627C00A77117 /* MBProgressHUD+DH.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+DH.h"; sourceTree = "<group>"; };
+		8E4F2737224C627C00A77117 /* MBProgressHUD+DH.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+DH.m"; sourceTree = "<group>"; };
 		8E74F12E222CFB04001E2A15 /* NSDate+DH.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+DH.m"; sourceTree = "<group>"; };
 		8E74F12F222CFB04001E2A15 /* NSString+Time.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Time.h"; sourceTree = "<group>"; };
 		8E74F130222CFB04001E2A15 /* NSDate+DH.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+DH.h"; sourceTree = "<group>"; };
@@ -74,6 +87,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2787A256DB481718C72960FA /* libPods-DHExpand.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,6 +108,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		19A0A1F93AE1F563E03BCE64 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4080F30C638C0B1668A9267D /* libPods-DHExpand.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		55D2E7E97E09FCD96603044D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8DBCB6E9EAACFA81E6B451F7 /* Pods-DHExpand.debug.xcconfig */,
+				8024510BAAE713C79B8361E8 /* Pods-DHExpand.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		8E4F2735224C627C00A77117 /* MBProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				8E4F2736224C627C00A77117 /* MBProgressHUD+DH.h */,
+				8E4F2737224C627C00A77117 /* MBProgressHUD+DH.m */,
+			);
+			path = MBProgressHUD;
+			sourceTree = "<group>";
+		};
 		8E74F134222CFCF1001E2A15 /* DisplayTime */ = {
 			isa = PBXGroup;
 			children = (
@@ -108,6 +149,10 @@
 		8E74F135222D016F001E2A15 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				8E49584A224B22C5003C4F25 /* UIButton+DH.h */,
+				8E49584B224B22C5003C4F25 /* UIButton+DH.m */,
+				8E495856224B6ACA003C4F25 /* UILabel+DH.h */,
+				8E495857224B6ACA003C4F25 /* UILabel+DH.m */,
 				8E7CF7562227B95C00B56006 /* UIViewController+DHAlert.h */,
 				8E7CF7572227B95C00B56006 /* UIViewController+DHAlert.m */,
 			);
@@ -121,6 +166,8 @@
 				8E7CF7382227B4D200B56006 /* DHExpandTests */,
 				8E7CF7432227B4D200B56006 /* DHExpandUITests */,
 				8E7CF71E2227B4D000B56006 /* Products */,
+				55D2E7E97E09FCD96603044D /* Pods */,
+				19A0A1F93AE1F563E03BCE64 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -173,6 +220,7 @@
 			isa = PBXGroup;
 			children = (
 				8E74F135222D016F001E2A15 /* Common */,
+				8E4F2735224C627C00A77117 /* MBProgressHUD */,
 				8E7E2D262238CB3500AD7B24 /* UpdateApp */,
 				8E7E2D252238CA7700AD7B24 /* VerificationCode */,
 				8E74F134222CFCF1001E2A15 /* DisplayTime */,
@@ -215,6 +263,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8E7CF7492227B4D200B56006 /* Build configuration list for PBXNativeTarget "DHExpand" */;
 			buildPhases = (
+				08CA71D1ECCB3A686BAE3988 /* [CP] Check Pods Manifest.lock */,
 				8E7CF7192227B4D000B56006 /* Sources */,
 				8E7CF71A2227B4D000B56006 /* Frameworks */,
 				8E7CF71B2227B4D000B56006 /* Resources */,
@@ -332,6 +381,31 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		08CA71D1ECCB3A686BAE3988 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DHExpand-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		8E7CF7192227B4D000B56006 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -339,11 +413,14 @@
 			files = (
 				8E7E2D342238E01A00AD7B24 /* DHViewController.m in Sources */,
 				8E7E2D352238E2A100AD7B24 /* UIButton+VerificationCode.m in Sources */,
+				8E495858224B6ACA003C4F25 /* UILabel+DH.m in Sources */,
 				8E7F034922360DC400A70E10 /* DHUpdateApp.m in Sources */,
+				8E4F2738224C627C00A77117 /* MBProgressHUD+DH.m in Sources */,
 				8E74F133222CFB04001E2A15 /* NSString+Time.m in Sources */,
 				8E7CF7582227B95C00B56006 /* UIViewController+DHAlert.m in Sources */,
 				8E7CF7302227B4D200B56006 /* main.m in Sources */,
 				8E74F132222CFB04001E2A15 /* NSDate+DH.m in Sources */,
+				8E49584C224B22C5003C4F25 /* UIButton+DH.m in Sources */,
 				8E7CF7222227B4D000B56006 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -494,6 +571,7 @@
 		};
 		8E7CF74A2227B4D200B56006 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8DBCB6E9EAACFA81E6B451F7 /* Pods-DHExpand.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -511,6 +589,7 @@
 		};
 		8E7CF74B2227B4D200B56006 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8024510BAAE713C79B8361E8 /* Pods-DHExpand.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

@@ -18,10 +18,10 @@
  @param actionTitles 按钮title数组
  @param actionCallBack 点击按钮的回调
  */
--(void)dh_actionSheetTitle:(NSString*)title
+- (void)dh_actionSheetTitle:(NSString*)title
                       msg:(NSString*)msg
              actionTitles:(NSArray*)actionTitles
-           actionCallBack:(void (^)(NSInteger index))actionCallBack ;
+           actionCallBack:(void (^)(NSInteger index))actionCallBack;
 
 /**
  中间弹出框
@@ -31,7 +31,7 @@
  @param actionTitles 按钮title数组
  @param actionCallBack 点击按钮的回调
  */
--(void)dh_alertTitle:(NSString*)title
+- (void)dh_alertTitle:(NSString*)title
                  msg:(NSString*)msg
         actionTitles:(NSArray*)actionTitles
       actionCallBack:(void (^)(NSInteger index))actionCallBack;
@@ -43,20 +43,20 @@
  @param msg msg
  @param sureHandler 点击确定按钮的回调
  */
--(void)dh_alertTitle:(NSString*)title
+- (void)dh_alertTitle:(NSString*)title
              message:(NSString*)msg
-         sureHandler:(void (^)(void))sureHandler ;
+         sureHandler:(void (^)(void))sureHandler;
 
 @end
 
 
-@interface UIView (DH)
+@interface NSObject(DH)
 
 /**
  获取当前view controller
 
  @return 当前显示的view controller
  */
-- (UIViewController*)getCurrentVC ;
+- (UIViewController*)getCurrentVC;
 
 @end

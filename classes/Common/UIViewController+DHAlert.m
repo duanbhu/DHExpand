@@ -11,7 +11,7 @@
 @implementation UIViewController (DHAlert)
 
 /** 弹出框 参数 */
--(void)dh_alertTitle:(NSString*)title
+- (void)dh_alertTitle:(NSString*)title
                  msg:(NSString*)msg
       preferredStyle:(UIAlertControllerStyle)preferredStyle
         actionTitles:(NSArray*)actionTitles
@@ -44,7 +44,7 @@
 }
 
 /** 中间弹出框 */
--(void)dh_alertTitle:(NSString*)title
+- (void)dh_alertTitle:(NSString*)title
                  msg:(NSString*)msg
         actionTitles:(NSArray*)actionTitles
       actionCallBack:(void (^)(NSInteger index))actionCallBack {
@@ -52,14 +52,14 @@
 }
 
 /** 底部弹出框 */
--(void)dh_actionSheetTitle:(NSString*)title
+- (void)dh_actionSheetTitle:(NSString*)title
                        msg:(NSString*)msg
               actionTitles:(NSArray*)actionTitles
             actionCallBack:(void (^)(NSInteger index))actionCallBack {
     [self dh_alertTitle:title msg:msg preferredStyle:UIAlertControllerStyleActionSheet actionTitles:actionTitles actionCallBack:actionCallBack];
 }
 
--(void)dh_alertTitle:(NSString *)title message:(NSString *)msg sureHandler:(void(^)(void))sureHandler {
+- (void)dh_alertTitle:(NSString *)title message:(NSString *)msg sureHandler:(void(^)(void))sureHandler {
     [self dh_alertTitle:title msg:msg actionTitles:@[@"确定"] actionCallBack:^(NSInteger index) {
         sureHandler();
     }];
@@ -68,7 +68,7 @@
 
 @end
 
-@implementation UIView (DH)
+@implementation NSObject (DH)
 
 - (UIViewController*)getCurrentVC {
     UIWindow *window = [[UIApplication sharedApplication].delegate window];
