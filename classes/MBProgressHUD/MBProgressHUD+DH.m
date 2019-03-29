@@ -8,7 +8,6 @@
 
 #import "MBProgressHUD+DH.h"
 
-
 static NSTimeInterval kDelay = 1.2 ;
 @implementation MBProgressHUD (DH)
 
@@ -86,17 +85,17 @@ static NSTimeInterval kDelay = 1.2 ;
 
 /** 显示成功信息 */
 + (void)dh_showSuccess:(NSString *)success toView:(UIView *)view {
-    [self dh_showMsg:success icon:@"HUD_success" hideDelay:kDelay toView:view];
+    [self dh_showMsg:success icon:@"DHHud.bundle/HUD_success" hideDelay:kDelay toView:view];
 }
 
 /** 显示错误信息 */
 + (void)dh_showError:(NSString *)error toView:(UIView *)view {
-    [self dh_showMsg:error icon:@"HUD_warning" hideDelay:kDelay toView:view];
+    [self dh_showMsg:error icon:@"DHHud.bundle/HUD_error" hideDelay:kDelay toView:view];
 }
 
 /** 显示警示信息 */
 + (void)dh_showWarning:(NSString *)warning toView:(UIView *)view {
-    [self dh_showMsg:warning icon:@"HUD_warning" hideDelay:kDelay toView:view];
+    [self dh_showMsg:warning icon:@"DHHud.bundle/HUD_warning" hideDelay:kDelay toView:view];
 }
 
 /** 移除 HUD */

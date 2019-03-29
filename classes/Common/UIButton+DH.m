@@ -41,4 +41,22 @@
     return button;
 }
 
+/**
+ UIControlEventTouchUpInside
+ 
+ @param touchActionBlock 按钮点击的回调
+ */
+- (void)dh_addTouchActionBlock:(DHTouchActionBlock)touchActionBlock {
+    objc_setAssociatedObject(self, _cmd, touchActionBlock, OBJC_ASSOCIATION_COPY_NONATOMIC);
+    [self addTarget:self action:@selector(clickedButton:) forControlEvents:UIControlEventTouchUpInside];
+}
+
+// 点击按钮
+- (void)clickedButton:(UIButton*)sender {
+    DHTouchActionBlock touchActionBlock = objc_getAssociatedObject(self, @selector(dh_addTouchActionBlock:));
+    if (touchActionBlock) {
+        touchActionBlock();
+    }
+}
+
 @end

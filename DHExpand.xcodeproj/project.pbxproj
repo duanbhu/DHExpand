@@ -11,6 +11,7 @@
 		8E49584C224B22C5003C4F25 /* UIButton+DH.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E49584B224B22C5003C4F25 /* UIButton+DH.m */; };
 		8E495858224B6ACA003C4F25 /* UILabel+DH.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E495857224B6ACA003C4F25 /* UILabel+DH.m */; };
 		8E4F2738224C627C00A77117 /* MBProgressHUD+DH.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E4F2737224C627C00A77117 /* MBProgressHUD+DH.m */; };
+		8E4F273B224CA16A00A77117 /* UIView+DH.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E4F273A224CA16A00A77117 /* UIView+DH.m */; };
 		8E74F132222CFB04001E2A15 /* NSDate+DH.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E74F12E222CFB04001E2A15 /* NSDate+DH.m */; };
 		8E74F133222CFB04001E2A15 /* NSString+Time.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E74F131222CFB04001E2A15 /* NSString+Time.m */; };
 		8E7CF7222227B4D000B56006 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E7CF7212227B4D000B56006 /* AppDelegate.m */; };
@@ -23,6 +24,7 @@
 		8E7E2D342238E01A00AD7B24 /* DHViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E7E2D332238E01A00AD7B24 /* DHViewController.m */; };
 		8E7E2D352238E2A100AD7B24 /* UIButton+VerificationCode.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E7CF75A2227C29300B56006 /* UIButton+VerificationCode.m */; };
 		8E7F034922360DC400A70E10 /* DHUpdateApp.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E7F034822360DC400A70E10 /* DHUpdateApp.m */; };
+		8E846ED2224DC6E200DDA6C5 /* DHHud.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8E846ED1224DC6E200DDA6C5 /* DHHud.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +54,8 @@
 		8E495857224B6ACA003C4F25 /* UILabel+DH.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UILabel+DH.m"; sourceTree = "<group>"; };
 		8E4F2736224C627C00A77117 /* MBProgressHUD+DH.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+DH.h"; sourceTree = "<group>"; };
 		8E4F2737224C627C00A77117 /* MBProgressHUD+DH.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+DH.m"; sourceTree = "<group>"; };
+		8E4F2739224CA16A00A77117 /* UIView+DH.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+DH.h"; sourceTree = "<group>"; };
+		8E4F273A224CA16A00A77117 /* UIView+DH.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+DH.m"; sourceTree = "<group>"; };
 		8E74F12E222CFB04001E2A15 /* NSDate+DH.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+DH.m"; sourceTree = "<group>"; };
 		8E74F12F222CFB04001E2A15 /* NSString+Time.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Time.h"; sourceTree = "<group>"; };
 		8E74F130222CFB04001E2A15 /* NSDate+DH.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+DH.h"; sourceTree = "<group>"; };
@@ -80,6 +84,7 @@
 		8E7E2D332238E01A00AD7B24 /* DHViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DHViewController.m; sourceTree = "<group>"; };
 		8E7F034722360DC400A70E10 /* DHUpdateApp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DHUpdateApp.h; sourceTree = "<group>"; };
 		8E7F034822360DC400A70E10 /* DHUpdateApp.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DHUpdateApp.m; sourceTree = "<group>"; };
+		8E846ED1224DC6E200DDA6C5 /* DHHud.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = DHHud.bundle; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,7 +127,6 @@
 				8DBCB6E9EAACFA81E6B451F7 /* Pods-DHExpand.debug.xcconfig */,
 				8024510BAAE713C79B8361E8 /* Pods-DHExpand.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -131,6 +135,7 @@
 			children = (
 				8E4F2736224C627C00A77117 /* MBProgressHUD+DH.h */,
 				8E4F2737224C627C00A77117 /* MBProgressHUD+DH.m */,
+				8E846ED1224DC6E200DDA6C5 /* DHHud.bundle */,
 			);
 			path = MBProgressHUD;
 			sourceTree = "<group>";
@@ -149,6 +154,8 @@
 		8E74F135222D016F001E2A15 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				8E4F2739224CA16A00A77117 /* UIView+DH.h */,
+				8E4F273A224CA16A00A77117 /* UIView+DH.m */,
 				8E49584A224B22C5003C4F25 /* UIButton+DH.h */,
 				8E49584B224B22C5003C4F25 /* UIButton+DH.m */,
 				8E495856224B6ACA003C4F25 /* UILabel+DH.h */,
@@ -362,6 +369,7 @@
 			files = (
 				8E7E2D312238DFD800AD7B24 /* Launch Screen.storyboard in Resources */,
 				8E7CF72A2227B4D200B56006 /* Assets.xcassets in Resources */,
+				8E846ED2224DC6E200DDA6C5 /* DHHud.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -421,6 +429,7 @@
 				8E7CF7302227B4D200B56006 /* main.m in Sources */,
 				8E74F132222CFB04001E2A15 /* NSDate+DH.m in Sources */,
 				8E49584C224B22C5003C4F25 /* UIButton+DH.m in Sources */,
+				8E4F273B224CA16A00A77117 /* UIView+DH.m in Sources */,
 				8E7CF7222227B4D000B56006 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

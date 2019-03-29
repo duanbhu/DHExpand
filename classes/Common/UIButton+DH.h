@@ -10,6 +10,8 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+typedef void (^DHTouchActionBlock)(void);
+
 @interface UIButton (DH)
 
 + (instancetype)dh_buttonWithTitle:(NSString *)title
@@ -26,6 +28,14 @@ NS_ASSUME_NONNULL_BEGIN
                           fontSize:(NSInteger)fontSize
                    backgroundColor:(UIColor*)backgroundColor
                       cornerRadius:(CGFloat)cornerRadius;
+
+
+/**
+ UIControlEventTouchUpInside
+
+ @param touchActionBlock 按钮点击的回调
+ */
+- (void)dh_addTouchActionBlock:(DHTouchActionBlock)touchActionBlock ;
 
 @end
 

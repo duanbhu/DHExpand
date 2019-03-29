@@ -12,6 +12,7 @@
 #import "NSString+Time.h"
 #import "UIButton+DH.h"
 #import "UILabel+DH.h"
+#import "MBProgressHUD+DH.h"
 
 @interface DHViewController ()
 
@@ -44,7 +45,14 @@
                                            titleColor:[UIColor blackColor]
                                              fontSize:14];
     thirdBtn.frame = CGRectMake(190, 100, 80, 40);
-    [thirdBtn addTarget:self action:@selector(alert1) forControlEvents:UIControlEventTouchUpInside];
+    //[thirdBtn addTarget:self action:@selector(alert1) forControlEvents:UIControlEventTouchUpInside];
+    [thirdBtn dh_addTouchActionBlock:^{
+        //[self alert1];
+       // [MBProgressHUD dh_showSuccess:@"操作成功" toView:self.view];
+       // [MBProgressHUD dh_showError:@"操作失败" toView:self.view];
+       // [MBProgressHUD dh_showWarning:@"操作警告" toView:self.view];
+        [MBProgressHUD dh_showTipsMessage:@"操作成功" toView:self.view];
+    }];
     [self.view addSubview:thirdBtn];
     
     UIButton *sheetBtn = [UIButton dh_buttonWithTitle:@"action sheet"
