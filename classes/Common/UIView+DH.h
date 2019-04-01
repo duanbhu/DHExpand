@@ -18,10 +18,10 @@ typedef void (^DHTapGestureBlock)(UITapGestureRecognizer *tap);
 - (void)dh_setBorderColor:(UIColor*)borderColor;
 - (void)dh_setCornerRadius:(CGFloat)cornerRadius borderColor:(UIColor*)borderColor;
 
-// 添加单击手势
+/** 添加单击手势 */
 - (void)dh_addTapGestureTarget:(id)target action:(SEL)action;
 
-// 单击手势的回调
+/** 单击手势的回调 */
 - (void)dh_addTapGestureBlock:(DHTapGestureBlock)tapGestureBlock;
 
 @end
