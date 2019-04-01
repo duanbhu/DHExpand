@@ -29,13 +29,15 @@ typedef void (^DHTouchActionBlock)(void);
                    backgroundColor:(UIColor*)backgroundColor
                       cornerRadius:(CGFloat)cornerRadius;
 
-
 /**
  UIControlEventTouchUpInside
 
  @param touchActionBlock 按钮点击的回调
  */
 - (void)dh_addTouchActionBlock:(DHTouchActionBlock)touchActionBlock ;
+
+/** 改变按钮的响应区域 */
+@property (nonatomic, assign) UIEdgeInsets responseInsets;
 
 @end
 

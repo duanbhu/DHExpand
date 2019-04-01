@@ -59,4 +59,26 @@
     }
 }
 
+/** ======================================================================= */
+/** 修改是按钮的响应区域  */
+- (UIEdgeInsets)responseInsets {
+    return [objc_getAssociatedObject(self, @selector(setResponseInsets:)) UIEdgeInsetsValue];
+}
+
+- (void)setResponseInsets:(UIEdgeInsets)responseInsets {
+    objc_setAssociatedObject(self, _cmd, [NSValue valueWithUIEdgeInsets:responseInsets], OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
+
+- (BOOL)pointInside:(CGPoint)point withEvent:(UIEvent *)event {
+    if (UIEdgeInsetsEqualToEdgeInsets(UIEdgeInsetsZero, self.responseInsets)) {
+        return [super pointInside:point withEvent:event];
+    }
+    else {
+        CGRect rect = UIEdgeInsetsInsetRect(self.bounds, self.responseInsets);
+        return CGRectContainsPoint(rect, point) ;
+    }
+}
+/** ======================================================================= */
+
+
 @end

@@ -25,7 +25,7 @@
     [self dh_setBorderColor:borderColor];
 }
 
-- (void)dh_addTarget:(id)target action:(SEL)action {
+- (void)dh_addTapGestureTarget:(id)target action:(SEL)action {
     self.userInteractionEnabled = YES;
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:target action:action];
     [self addGestureRecognizer:tap];
@@ -33,7 +33,7 @@
 
 - (void)dh_addTapGestureBlock:(DHTapGestureBlock)tapGestureBlock {
     objc_setAssociatedObject(self, _cmd, tapGestureBlock, OBJC_ASSOCIATION_COPY_NONATOMIC);
-    [self dh_addTarget:self action:@selector(clickedHandldTap:)];
+    [self dh_addTapGestureTarget:self action:@selector(clickedHandldTap:)];
 }
 
 - (void)clickedHandldTap:(UITapGestureRecognizer*)tap {
