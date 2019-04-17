@@ -14,6 +14,9 @@ typedef void (^DHTouchActionBlock)(void);
 
 @interface UIButton (DH)
 
+/** 改变按钮的响应区域 */
+@property (nonatomic, assign) UIEdgeInsets responseInsets;
+
 + (instancetype)dh_buttonWithTitle:(NSString *)title
                         titleColor:(UIColor*)titleColor
                           fontSize:(NSInteger)fontSize;
@@ -36,8 +39,11 @@ typedef void (^DHTouchActionBlock)(void);
  */
 - (void)dh_addTouchActionBlock:(DHTouchActionBlock)touchActionBlock ;
 
-/** 改变按钮的响应区域 */
-@property (nonatomic, assign) UIEdgeInsets responseInsets;
+- (void)dh_setBackgroundColor:(UIColor *)backgroundColor forState:(UIControlState)state; // default is nil; state: normal/Highlighted/Disabled/Selected
+- (void)dh_setBorderColor:(UIColor *)borderColor forState:(UIControlState)state;
+
+- (UIColor *)dh_backgroundColorForState:(UIControlState)state;
+- (UIColor *)dh_borderColorForState:(UIControlState)state;
 
 @end
 

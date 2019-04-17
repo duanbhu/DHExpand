@@ -13,7 +13,7 @@
 + (instancetype)dh_labelWithTitle:(NSString *)title
                         textColor:(UIColor *)textColor
                          fontSize:(NSInteger)fontSize {
-    UILabel *label = [[UILabel alloc] init];
+    UILabel *label = [[self alloc] init];
     label.text = title ;
     label.textColor = textColor;
     label.font = [UIFont systemFontOfSize:fontSize];

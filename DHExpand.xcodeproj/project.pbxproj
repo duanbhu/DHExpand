@@ -78,7 +78,7 @@
 		8E7CF75A2227C29300B56006 /* UIButton+VerificationCode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+VerificationCode.m"; sourceTree = "<group>"; };
 		8E7E2D2A2238D4C400AD7B24 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 		8E7E2D2B2238D4C400AD7B24 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = SOURCE_ROOT; };
-		8E7E2D2E2238D93200AD7B24 /* DHExpand.podspec */ = {isa = PBXFileReference; explicitFileType = text.css; fileEncoding = 2483028224; name = DHExpand.podspec; path = ../DHExpand.podspec; sourceTree = "<group>"; };
+		8E7E2D2E2238D93200AD7B24 /* DHExpand.podspec */ = {isa = PBXFileReference; explicitFileType = text.css; fileEncoding = 4; name = DHExpand.podspec; path = ../DHExpand.podspec; sourceTree = "<group>"; };
 		8E7E2D302238DFD800AD7B24 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		8E7E2D322238E01A00AD7B24 /* DHViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DHViewController.h; sourceTree = "<group>"; };
 		8E7E2D332238E01A00AD7B24 /* DHViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DHViewController.m; sourceTree = "<group>"; };

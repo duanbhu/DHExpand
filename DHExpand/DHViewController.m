@@ -47,7 +47,8 @@
     thirdBtn.frame = CGRectMake(190, 100, 80, 40);
     //[thirdBtn addTarget:self action:@selector(alert1) forControlEvents:UIControlEventTouchUpInside];
     [thirdBtn dh_addTouchActionBlock:^{
-        [MBProgressHUD dh_showTipsMessage:@"操作成功" toView:self.view];
+        thirdBtn.selected = !thirdBtn.isSelected;
+        //[MBProgressHUD dh_showTipsMessage:@"操作成功" toView:self.view];
     }];
     [self.view addSubview:thirdBtn];
     
@@ -81,6 +82,21 @@
     label4.frame = CGRectMake(10, 320, 200, 40);
     [self.view addSubview:label4];
     
+    UIButton *likeBtn = [UIButton dh_buttonWithTitle:@"456" titleColor:[UIColor blackColor] fontSize:14];
+    [likeBtn setImage:[UIImage imageNamed:@"weibiaoti1"] forState:UIControlStateNormal];
+    [likeBtn setImage:[UIImage imageNamed:@"weibiaoti1-2"] forState:UIControlStateSelected];
+    [likeBtn dh_setBackgroundColor:[UIColor redColor] forState:UIControlStateNormal];
+    [likeBtn dh_setBackgroundColor:[UIColor greenColor] forState:UIControlStateSelected];
+    [likeBtn dh_setBorderColor:[UIColor greenColor] forState:UIControlStateNormal];
+    [likeBtn dh_setBorderColor:[UIColor redColor] forState:UIControlStateSelected];
+    likeBtn.frame = CGRectMake(10, 370, 70, 30);
+    likeBtn.titleEdgeInsets = UIEdgeInsetsMake(0, 10, 0, -10);
+    [likeBtn addTarget:self action:@selector(sdsd:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:likeBtn];
+}
+
+- (void)sdsd:(UIButton*)sender {
+    sender.selected = !sender.isSelected;
 }
 
 // UIAlertController
