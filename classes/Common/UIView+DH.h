@@ -18,6 +18,11 @@ typedef void (^DHTapGestureBlock)(UITapGestureRecognizer *tap);
 - (void)dh_setBorderColor:(UIColor*)borderColor;
 - (void)dh_setCornerRadius:(CGFloat)cornerRadius borderColor:(UIColor*)borderColor;
 
+- (void)dh_underlineWithColor:(UIColor*)color;
+- (void)dh_underlineWithColor:(UIColor*)color margin:(CGFloat)margin;
+- (void)dh_underlineWithColor:(UIColor*)color leftMargin:(CGFloat)leftMargin;
+- (void)dh_underlineWithColor:(UIColor*)color leftMargin:(CGFloat)leftMargin rightMargin:(CGFloat)rightMargin;
+
 /** 添加单击手势 */
 - (void)dh_addTapGestureTarget:(id)target action:(SEL)action;
 

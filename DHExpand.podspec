@@ -8,9 +8,9 @@
 
 Pod::Spec.new do |s|
     s.name         = "DHExpand"
-    s.version      = "1.0.3"
+    s.version      = "1.0.4"
     s.ios.deployment_target = '8.0'
-    s.summary      = "一些常用的代码，UIAlertController封装、时间戳格式化、app更新提示、按钮获取验证码的倒计时等"
+    s.summary      = "UIButton/UILable/UIView/UIAlertController封装、时间戳格式化、app更新提示、按钮获取验证码的倒计时等"
     s.homepage     = "https://github.com/duanHuing/DHExpand"
     s.license      = "MIT"
     # s.license    = { :type => "MIT", :file => "FILE_LICENSE" }

@@ -25,17 +25,44 @@
     [self dh_setBorderColor:borderColor];
 }
 
+- (void)dh_underlineWithColor:(UIColor*)color {
+    [self dh_underlineWithColor:color margin:0];
+}
+
+- (void)dh_underlineWithColor:(UIColor*)color margin:(CGFloat)margin {
+    [self dh_underlineWithColor:color leftMargin:margin rightMargin:margin];
+}
+
+- (void)dh_underlineWithColor:(UIColor*)color leftMargin:(CGFloat)leftMargin {
+    [self dh_underlineWithColor:color leftMargin:leftMargin rightMargin:0];
+}
+
+- (void)dh_underlineWithColor:(UIColor*)color leftMargin:(CGFloat)leftMargin rightMargin:(CGFloat)rightMargin {
+    CALayer *layer = [CALayer layer];
+    CGFloat height = 1 / [UIScreen mainScreen].scale;
+    layer.frame = CGRectMake(leftMargin, CGRectGetHeight(self.frame) - height, CGRectGetWidth(self.frame) - leftMargin - rightMargin, height);
+    layer.backgroundColor = color.CGColor;
+    [self.layer addSublayer:layer];
+}
+
+/**
+ * 添加单击手势
+ */
 - (void)dh_addTapGestureTarget:(id)target action:(SEL)action {
     self.userInteractionEnabled = YES;
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:target action:action];
     [self addGestureRecognizer:tap];
 }
 
+/**
+ * 单击手势的回调
+ */
 - (void)dh_addTapGestureBlock:(DHTapGestureBlock)tapGestureBlock {
     objc_setAssociatedObject(self, _cmd, tapGestureBlock, OBJC_ASSOCIATION_COPY_NONATOMIC);
     [self dh_addTapGestureTarget:self action:@selector(clickedHandldTap:)];
 }
 
+// 点击手势
 - (void)clickedHandldTap:(UITapGestureRecognizer*)tap {
     DHTapGestureBlock tapGestureBlock = objc_getAssociatedObject(self, @selector(dh_addTapGestureBlock:));
     if (tapGestureBlock) {
