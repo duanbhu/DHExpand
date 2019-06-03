@@ -81,7 +81,7 @@
  @return 年-月-日 时-分-秒
  */
 - (NSString*)dh_becomeDate {
-    return [self dh_becomeDateForWithFormat:@"yyyy-MM-dd HH:mm"];
+    return [self dh_becomeDateForWithFormat:@"yyyy-MM-dd HH:mm:ss"];
 }
 
 //获取当前时间戳(以毫秒为单位)

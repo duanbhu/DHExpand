@@ -1,5 +1,5 @@
 #
-#  Be sure to run `pod spec lint DHExpand.podspec' to ensure this is a
+#  Be sure to run 'pod spec lint DHExpand.podspec' to ensure this is a
 #  valid spec and to remove all comments including this before submitting the spec.
 #
 #  To learn more about Podspec attributes see https://docs.cocoapods.org/specification.html
@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
     s.name         = "DHExpand"
-    s.version      = "1.0.4"
+    s.version      = "1.0.5"
     s.ios.deployment_target = '8.0'
     s.summary      = "UIButton/UILable/UIView/UIAlertController封装、时间戳格式化、app更新提示、按钮获取验证码的倒计时等"
     s.homepage     = "https://github.com/duanHuing/DHExpand"

@@ -17,8 +17,9 @@ static NSTimeInterval kDelay = 1.2 ;
     MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:view animated:YES];
     hud.tintColor = [UIColor blackColor];
     hud.contentColor = [UIColor whiteColor];
-    hud.label.text = message;
-    hud.label.textColor = [UIColor whiteColor];
+    hud.detailsLabel.text = message;
+    hud.detailsLabel.textColor = [UIColor whiteColor];
+    hud.detailsLabel.font = [UIFont systemFontOfSize:14];
     hud.bezelView.color = [UIColor blackColor];
     
     // 隐藏时候从父控件中移除
@@ -100,8 +101,13 @@ static NSTimeInterval kDelay = 1.2 ;
 
 /** 移除 HUD */
 + (void)dh_hideHUDForView:(UIView *)view {
+    
     if (view == nil) view = (UIView*)[UIApplication sharedApplication].delegate.window;
-    [self hideHUDForView:view animated:YES];
+    dispatch_async(dispatch_get_global_queue( DISPATCH_QUEUE_PRIORITY_LOW, 0), ^{
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self hideHUDForView:view animated:YES];
+        });
+    });
 }
 
 @end

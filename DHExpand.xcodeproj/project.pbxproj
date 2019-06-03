@@ -12,6 +12,7 @@
 		8E495858224B6ACA003C4F25 /* UILabel+DH.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E495857224B6ACA003C4F25 /* UILabel+DH.m */; };
 		8E4F2738224C627C00A77117 /* MBProgressHUD+DH.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E4F2737224C627C00A77117 /* MBProgressHUD+DH.m */; };
 		8E4F273B224CA16A00A77117 /* UIView+DH.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E4F273A224CA16A00A77117 /* UIView+DH.m */; };
+		8E635D832270478900C903B6 /* DHTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E635D822270478900C903B6 /* DHTextView.m */; };
 		8E74F132222CFB04001E2A15 /* NSDate+DH.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E74F12E222CFB04001E2A15 /* NSDate+DH.m */; };
 		8E74F133222CFB04001E2A15 /* NSString+Time.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E74F131222CFB04001E2A15 /* NSString+Time.m */; };
 		8E7CF7222227B4D000B56006 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E7CF7212227B4D000B56006 /* AppDelegate.m */; };
@@ -56,6 +57,8 @@
 		8E4F2737224C627C00A77117 /* MBProgressHUD+DH.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+DH.m"; sourceTree = "<group>"; };
 		8E4F2739224CA16A00A77117 /* UIView+DH.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+DH.h"; sourceTree = "<group>"; };
 		8E4F273A224CA16A00A77117 /* UIView+DH.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+DH.m"; sourceTree = "<group>"; };
+		8E635D812270478900C903B6 /* DHTextView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DHTextView.h; sourceTree = "<group>"; };
+		8E635D822270478900C903B6 /* DHTextView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DHTextView.m; sourceTree = "<group>"; };
 		8E74F12E222CFB04001E2A15 /* NSDate+DH.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+DH.m"; sourceTree = "<group>"; };
 		8E74F12F222CFB04001E2A15 /* NSString+Time.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Time.h"; sourceTree = "<group>"; };
 		8E74F130222CFB04001E2A15 /* NSDate+DH.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+DH.h"; sourceTree = "<group>"; };
@@ -162,6 +165,8 @@
 				8E495857224B6ACA003C4F25 /* UILabel+DH.m */,
 				8E7CF7562227B95C00B56006 /* UIViewController+DHAlert.h */,
 				8E7CF7572227B95C00B56006 /* UIViewController+DHAlert.m */,
+				8E635D812270478900C903B6 /* DHTextView.h */,
+				8E635D822270478900C903B6 /* DHTextView.m */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -425,6 +430,7 @@
 				8E7F034922360DC400A70E10 /* DHUpdateApp.m in Sources */,
 				8E4F2738224C627C00A77117 /* MBProgressHUD+DH.m in Sources */,
 				8E74F133222CFB04001E2A15 /* NSString+Time.m in Sources */,
+				8E635D832270478900C903B6 /* DHTextView.m in Sources */,
 				8E7CF7582227B95C00B56006 /* UIViewController+DHAlert.m in Sources */,
 				8E7CF7302227B4D200B56006 /* main.m in Sources */,
 				8E74F132222CFB04001E2A15 /* NSDate+DH.m in Sources */,
