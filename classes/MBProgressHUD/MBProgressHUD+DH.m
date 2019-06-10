@@ -40,9 +40,10 @@ static NSTimeInterval kDelay = 1.2 ;
  @param delay delay秒后hud将会自动消失 ,delay==0表示不会自动消失
  @param model hud的显示类型
  */
-+ (void)showTipsMessage:(NSString*)message toView:(UIView*)view hideDelay:(NSTimeInterval)delay Model:(MBProgressHUDMode)model {
++ (MBProgressHUD *)showTipsMessage:(NSString*)message toView:(UIView*)view hideDelay:(NSTimeInterval)delay Model:(MBProgressHUDMode)model {
     MBProgressHUD *hud = [MBProgressHUD dh_showMsg:message icon:nil hideDelay:delay toView:view];
     hud.mode = model;
+    return hud;
 }
 
 /**
@@ -75,8 +76,8 @@ static NSTimeInterval kDelay = 1.2 ;
 }
 
 /**  带菊花的文字，不会自动消失  */
-+ (void)dh_showActivityMessage:(NSString*)message toView:(UIView*)view {
-    [self showTipsMessage:message toView:view hideDelay:0 Model:MBProgressHUDModeIndeterminate];
++ (MBProgressHUD *)dh_showActivityMessage:(NSString*)message toView:(UIView*)view {
+    return [self showTipsMessage:message toView:view hideDelay:0 Model:MBProgressHUDModeIndeterminate];
 }
 
 /**  提示文字，1s后会自动消失  */

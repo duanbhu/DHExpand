@@ -21,8 +21,17 @@
  */
 + (MBProgressHUD*)dh_showMsg:(NSString*)msg icon:(NSString*)icon hideDelay:(NSTimeInterval)delay toView:(UIView*)view;
 
+/**
+ 显示一段文字
+ @param message 要显示的文字
+ @param view 显示hud的view
+ @param delay delay秒后hud将会自动消失 ,delay==0表示不会自动消失
+ @param model hud的显示类型
+ */
++ (MBProgressHUD *)showTipsMessage:(NSString*)message toView:(UIView*)view hideDelay:(NSTimeInterval)delay Model:(MBProgressHUDMode)model;
+
 /**  带菊花的文字，不会自动消失  */
-+ (void)dh_showActivityMessage:(NSString*)message toView:(UIView*)view;
++ (MBProgressHUD*)dh_showActivityMessage:(NSString*)message toView:(UIView*)view;
 
 /**  提示文字，1s后会自动消失  */
 + (void)dh_showTipsMessage:(NSString*)message toView:(UIView*)view;
