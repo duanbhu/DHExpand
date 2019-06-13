@@ -81,7 +81,7 @@
 - (UILabel *)placeholderLab {
     if (!_placeholderLab) {
         _placeholderLab = [UILabel new];
-        _placeholderLab.textColor = [UIColor redColor];
+        _placeholderLab.textColor = [UIColor grayColor];
         _placeholderLab.font = self.font;
         _placeholderLab.numberOfLines = 2;
         [self addSubview:_placeholderLab];

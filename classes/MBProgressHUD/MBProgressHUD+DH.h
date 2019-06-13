@@ -28,7 +28,7 @@
  @param delay delay秒后hud将会自动消失 ,delay==0表示不会自动消失
  @param model hud的显示类型
  */
-+ (MBProgressHUD *)showTipsMessage:(NSString*)message toView:(UIView*)view hideDelay:(NSTimeInterval)delay Model:(MBProgressHUDMode)model;
++ (MBProgressHUD *)dh_showTipsMessage:(NSString*)message toView:(UIView*)view hideDelay:(NSTimeInterval)delay Model:(MBProgressHUDMode)model;
 
 /**  带菊花的文字，不会自动消失  */
 + (MBProgressHUD*)dh_showActivityMessage:(NSString*)message toView:(UIView*)view;
