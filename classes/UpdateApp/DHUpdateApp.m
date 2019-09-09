@@ -13,7 +13,7 @@
 
 + (void)dh_checkForUpdatesWithAPPID:(NSString *)appId {
     
-    [self dh_checkForUpdatesWithAPPID:appId completion:^(NSString *currentVersion, NSString *storeVersion, NSString *openURLString, BOOL isUpdate) {
+    [self dh_checkForUpdatesWithAPPID:appId completion:^(NSString *currentVersion, NSString *storeVersion, NSString *releaseNotes, NSString *openURLString, BOOL isUpdate) {
         if (isUpdate) {
             [self showAlertViewTitle:@"发现新版本" msg:[NSString stringWithFormat:@"检测到新版本%@,是否更新？",storeVersion] openUrl:openURLString];
         }
@@ -38,7 +38,7 @@
             dispatch_async(dispatch_get_main_queue(), ^{
                 // 不更新
                 if (completion) {
-                    completion(currentVersion,nil,nil,NO);
+                    completion(currentVersion,nil,nil,nil,NO);
                 }
             });
             return;
@@ -48,17 +48,17 @@
             if ([appInfoDic[@"resultCount"] integerValue] == 0) {
                 // 检测出未上架的APP或者查询不到
                 if (completion) {
-                    completion(currentVersion,nil,nil,NO);
+                    completion(currentVersion,nil,nil,nil,NO);
                 }
                 return;
             }
             
             NSDictionary *infoDict = appInfoDic[@"results"][0] ;
             NSString *appStoreVersion = infoDict[@"version"];
-            
+            NSString *releaseNotes = infoDict[@"releaseNotes"];
             BOOL isUpdate = [self isUpdateWithCurrentVerson:currentVersion storeVerson:appStoreVersion];
             if (completion) {
-                completion(currentVersion,appStoreVersion,infoDict[@"trackViewUrl"],isUpdate);
+                completion(currentVersion,appStoreVersion,releaseNotes,infoDict[@"trackViewUrl"],isUpdate);
             }
         });
     }];
@@ -68,11 +68,11 @@
 /**
  比较应用在App Store里的版本号和当前版本号，来确定是不是最新版本
  按照.分割字符串，然后逐级比较版本大小。
-
+ 
  @param currentVersion 当前版本号
  @param storeVersion 商店的版本号
  @return YES : 商店本号大于当前版本，需要更新；
-          NO : 商店当前版本号 <= 当前版本，不需要更新，
+ NO : 商店当前版本号 <= 当前版本，不需要更新，
  */
 + (BOOL)isUpdateWithCurrentVerson:(NSString *)currentVersion storeVerson:(NSString *)storeVersion {
     
