@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
     s.name         = "DHExpand"
-    s.version      = "1.0.8"
+    s.version      = "1.0.9"
     s.ios.deployment_target = '8.0'
     s.summary      = "UIButton/UILable/UIView/UIAlertController封装、时间戳格式化、app更新提示、按钮获取验证码的倒计时等"
     s.homepage     = "https://github.com/duanHuing/DHExpand"
