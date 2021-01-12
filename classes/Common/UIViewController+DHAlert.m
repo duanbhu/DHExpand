@@ -8,6 +8,20 @@
 
 #import "UIViewController+DHAlert.h"
 
+@implementation DHAlertConfig
+
+static DHAlertConfig *shareManager = nil;
+static dispatch_once_t onceToken;
+
++ (instancetype)defaultConfig {
+    dispatch_once(&onceToken, ^{
+        shareManager = [[DHAlertConfig alloc] init];
+    });
+    return shareManager;
+}
+
+@end
+
 @implementation UIViewController (DHAlert)
 
 /** 弹出框 参数 */
@@ -19,6 +33,7 @@
     
     UIAlertController *alertController = [UIAlertController alertControllerWithTitle:title message:msg preferredStyle:preferredStyle];
     NSInteger index = 0;
+    DHAlertConfig *config = [DHAlertConfig defaultConfig];
     for (NSString *title in actionTitles) {
         UIAlertActionStyle style = UIAlertActionStyleDefault;
         if ([title isEqualToString:@"取消"]) {
@@ -29,6 +44,16 @@
                 actionCallBack(index);
             }
         }];
+        
+        UIColor *actionTextColor = config.actionTextColors[title];
+        if (!actionTextColor) {
+            actionTextColor = config.normalColor;
+        }
+        
+        if (actionTextColor) {
+            [action setValue:actionTextColor forKey:@"_titleTextColor"];
+        }
+        
         [alertController addAction:action];
         index ++ ;
     }
@@ -66,9 +91,10 @@
 - (void)dh_alertTitle:(NSString *)title
               message:(NSString *)msg
           sureHandler:(void(^)(void))sureHandler {
+    DHAlertConfig *config = [DHAlertConfig defaultConfig];
     [self dh_alertTitle:title
                     msg:msg
-           actionTitles:@[@"确定"]
+           actionTitles:@[config.singleTitle ? : @"确定"]
          actionCallBack:^(NSInteger index) {
              sureHandler();
          }];

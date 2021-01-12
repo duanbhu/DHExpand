@@ -24,6 +24,10 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    DHAlertConfig *config = [DHAlertConfig defaultConfig];
+    config.normalColor = [UIColor blackColor];
+    config.singleTitle = @"我知道了";
+    config.actionTextColors = @{@"确定":[UIColor purpleColor]};
     UIButton *alertBtn = [UIButton dh_buttonWithTitle:@"alert title"
                                            titleColor:[UIColor whiteColor]
                                              fontSize:14
@@ -103,12 +107,15 @@
 
 - (void)alert {
     
-    [self dh_alertTitle:@"提示"
-                    msg:@"setup after loading the view."
-           actionTitles:@[@"取消",@"确定"]
-         actionCallBack:^(NSInteger index) {
-             NSLog(@"点击了第%ld个",index);
-         }];
+//    [self dh_alertTitle:@"提示"
+//                    msg:@"setup after loading the view."
+//           actionTitles:@[@"取消",@"确定"]
+//         actionCallBack:^(NSInteger index) {
+//             NSLog(@"点击了第%ld个",index);
+//         }];
+    [self dh_alertTitle:@"温馨提示" message:@"setup after loading the view." sureHandler:^{
+        
+    }];
 }
 
 - (void)alert1 {

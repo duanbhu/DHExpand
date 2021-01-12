@@ -26,7 +26,6 @@
 		8E7E2D352238E2A100AD7B24 /* UIButton+VerificationCode.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E7CF75A2227C29300B56006 /* UIButton+VerificationCode.m */; };
 		8E7F034922360DC400A70E10 /* DHUpdateApp.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E7F034822360DC400A70E10 /* DHUpdateApp.m */; };
 		8E846ED2224DC6E200DDA6C5 /* DHHud.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8E846ED1224DC6E200DDA6C5 /* DHHud.bundle */; };
-		8EA42B3222AE2CA900F3557F /* 985555.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8EA42B3122AE2CA900F3557F /* 985555.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,7 +88,6 @@
 		8E7F034722360DC400A70E10 /* DHUpdateApp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DHUpdateApp.h; sourceTree = "<group>"; };
 		8E7F034822360DC400A70E10 /* DHUpdateApp.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DHUpdateApp.m; sourceTree = "<group>"; };
 		8E846ED1224DC6E200DDA6C5 /* DHHud.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = DHHud.bundle; sourceTree = "<group>"; };
-		8EA42B3122AE2CA900F3557F /* 985555.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = 985555.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -263,7 +261,6 @@
 		8E7E2D292238D4AE00AD7B24 /* Podspec Metadata */ = {
 			isa = PBXGroup;
 			children = (
-				8EA42B3122AE2CA900F3557F /* 985555.txt */,
 				8E7E2D2E2238D93200AD7B24 /* DHExpand.podspec */,
 				8E7E2D2B2238D4C400AD7B24 /* LICENSE */,
 				8E7E2D2A2238D4C400AD7B24 /* README.md */,
@@ -375,7 +372,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8EA42B3222AE2CA900F3557F /* 985555.txt in Resources */,
 				8E7E2D312238DFD800AD7B24 /* Launch Screen.storyboard in Resources */,
 				8E7CF72A2227B4D200B56006 /* Assets.xcassets in Resources */,
 				8E846ED2224DC6E200DDA6C5 /* DHHud.bundle in Resources */,

@@ -8,6 +8,23 @@
 
 #import <UIKit/UIKit.h>
 
+
+@interface DHAlertConfig : NSObject
+
+@property (nonatomic, strong) UIColor *normalColor;
+
+@property (nonatomic, strong) NSString *singleTitle;
+
+@property (nonatomic, strong) NSDictionary <NSString *, UIColor *>*actionTextColors;
+
++ (instancetype)defaultConfig;
+
+- (instancetype)init NS_UNAVAILABLE;
++ (instancetype)new NS_UNAVAILABLE;
+
+@end
+
+
 @interface UIViewController (DHAlert)
 
 /**
