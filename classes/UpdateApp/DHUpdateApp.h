@@ -19,7 +19,7 @@
  @param releaseNotes 本次更新的内容
  @param isUpdate 是否需要更新
  */
-typedef void (^DHCheckCompletion)(NSString * currentVersion, NSString *storeVersion, NSString *releaseNotes, NSString *openURLString, BOOL isUpdate);
+typedef void (^DHCheckCompletion)(NSString * _Nullable currentVersion, NSString * _Nullable storeVersion, NSString * _Nullable releaseNotes, NSString * _Nullable openURLString, BOOL isUpdate);
 
 NS_ASSUME_NONNULL_BEGIN
 
