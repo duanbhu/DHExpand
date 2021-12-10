@@ -2,7 +2,7 @@
 //  DHViewController.m
 //  DHExpand
 //
-//  Created by bangju on 2019/3/13.
+//  Created by duan on 2019/3/13.
 //  Copyright © 2019年 duan. All rights reserved.
 //
 
@@ -12,6 +12,7 @@
 #import "NSString+Time.h"
 #import "UIButton+DH.h"
 #import "UILabel+DH.h"
+#import "UIView+DH.h"
 #import "MBProgressHUD+DH.h"
 
 @interface DHViewController ()
@@ -97,6 +98,15 @@
     likeBtn.titleEdgeInsets = UIEdgeInsetsMake(0, 10, 0, -10);
     [likeBtn addTarget:self action:@selector(sdsd:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:likeBtn];
+    
+    
+    [likeBtn dh_setGradientHorWithColors:@[[UIColor redColor], [UIColor blackColor]]];
+    
+    [likeBtn dh_setGradientVerWithColors:@[[UIColor whiteColor], [UIColor blackColor]]];
+
+    
+    [likeBtn dh_setGradientHorWithColors:@[[UIColor redColor], [UIColor blackColor]]];
+
 }
 
 - (void)sdsd:(UIButton*)sender {
