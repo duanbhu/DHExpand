@@ -2,7 +2,7 @@
 //  UIView+DH.h
 //  DHExpand
 //
-//  Created by bangju on 2019/3/28.
+//  Created by duan on 2019/3/28.
 //  Copyright © 2019年 duan. All rights reserved.
 //
 
@@ -30,5 +30,58 @@ typedef void (^DHTapGestureBlock)(UITapGestureRecognizer *tap);
 - (void)dh_addTapGestureBlock:(DHTapGestureBlock)tapGestureBlock;
 
 @end
+
+/// 阴影
+@interface UIView (Layer)
+
+/// 添加阴影
+- (void)dh_setDefaultShadow;
+
+/// 添加阴影
+- (void)dh_setCornerRadius:(CGFloat)cornerRadius
+               shadowColor:(UIColor *)shadowColor
+              shadowOffset:(CGSize)shadowOffset
+             shadowOpacity:(CGFloat)shadowOpacity
+              shadowRadius:(CGFloat)shadowRadius;
+
+/// 设置渐变背景色  从startPoint到endPoint
+/// @param rect 尺寸  self.bounds
+/// @param startPoint 初始位置
+/// @param endPoint 结束位置
+/// @param colors 渐变颜色
+/// @param locations 渐变
+- (void)dh_setGradientWithframe:(CGRect)rect
+                     startPoint:(CGPoint)startPoint
+                       endPoint:(CGPoint)endPoint
+                         colors:(NSArray <UIColor *>*)colors
+                      locations:(NSArray <NSNumber *>*)locations;
+
+- (void)dh_setGradientWithframe:(CGRect)rect
+                     startPoint:(CGPoint)startPoint
+                       endPoint:(CGPoint)endPoint
+                         colors:(NSArray <UIColor *>*)colors;
+
+/// 设置渐变背景色  从上到下
+- (void)dh_setGradientVerWithframe:(CGRect)rect colors:(NSArray <UIColor *>*)colors;
+
+/// 设置渐变背景色  从左到右
+- (void)dh_setGradientHorWithframe:(CGRect)rect colors:(NSArray <UIColor *>*)colors;
+
+/// 设置渐变背景色  从上到下
+- (void)dh_setGradientVerWithColors:(NSArray <UIColor *>*)colors;
+
+/// 设置渐变背景色  从左到右
+- (void)dh_setGradientHorWithColors:(NSArray <UIColor *>*)colors;
+
+@end
+
+@interface UIView (Add)
+
+- (void)dh_addSubviews:(NSArray *)subviews;
+
+- (void)dh_removeAllSubviews;
+
+@end
+
 
 NS_ASSUME_NONNULL_END

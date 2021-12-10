@@ -2,7 +2,7 @@
 //  UIButton+DH.m
 //  DHExpand
 //
-//  Created by bangju on 2019/3/27.
+//  Created by duan on 2019/3/27.
 //  Copyright © 2019年 duan. All rights reserved.
 //
 
@@ -21,27 +21,58 @@
 @implementation UIButton (DH)
 
 + (void)load {
-    method_exchangeImplementations(class_getInstanceMethod([self class], @selector(setHighlighted:)),class_getInstanceMethod([self class], @selector(dh_setHighlighted:)));
-    
-    method_exchangeImplementations(class_getInstanceMethod([self class], @selector(setEnabled:)),class_getInstanceMethod([self class], @selector(dh_setEnabled:)));
-    
-    method_exchangeImplementations(class_getInstanceMethod([self class], @selector(setSelected:)),class_getInstanceMethod([self class], @selector(dh_setSelected:)));
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        method_exchangeImplementations(class_getInstanceMethod([self class], @selector(setHighlighted:)),class_getInstanceMethod([self class], @selector(dh_setHighlighted:)));
+        
+        method_exchangeImplementations(class_getInstanceMethod([self class], @selector(setEnabled:)),class_getInstanceMethod([self class], @selector(dh_setEnabled:)));
+        
+        method_exchangeImplementations(class_getInstanceMethod([self class], @selector(setSelected:)),class_getInstanceMethod([self class], @selector(dh_setSelected:)));
+    });
 }
 
 + (instancetype)dh_buttonWithTitle:(NSString *)title
-                        titleColor:(UIColor*)titleColor
-                          fontSize:(NSInteger)fontSize {
+                        titleColor:(UIColor *)titleColor
+                              font:(UIFont *)font {
     UIButton *button = [[self alloc] init];
-    button.titleLabel.font = [UIFont systemFontOfSize:fontSize];
+    button.titleLabel.font = font;
     [button setTitle:title forState:UIControlStateNormal];
     [button setTitleColor:titleColor forState:UIControlStateNormal];
     return button;
 }
 
-+ (instancetype)dh_buttonWithTitle:(NSString *)title titleColor:(UIColor *)titleColor fontSize:(NSInteger)fontSize imageName:(NSString *)imageName {
-    UIButton *button = [self dh_buttonWithTitle:title titleColor:titleColor fontSize:fontSize];
++ (instancetype)dh_buttonWithTitle:(NSString *)title
+                        titleColor:(UIColor*)titleColor
+                              font:(UIFont *)font
+                         imageName:(NSString*)imageName {
+    UIButton *button = [self dh_buttonWithTitle:title titleColor:titleColor font:font];
     [button setImage:[UIImage imageNamed:imageName] forState:UIControlStateNormal];
     return button;
+}
+
++ (instancetype)dh_buttonWithTitle:(NSString *)title
+                        titleColor:(UIColor*)titleColor
+                              font:(UIFont *)font
+                   backgroundColor:(UIColor*)backgroundColor
+                      cornerRadius:(CGFloat)cornerRadius {
+    UIButton *button = [self dh_buttonWithTitle:title titleColor:titleColor font:font];
+    button.backgroundColor = backgroundColor;
+    button.layer.cornerRadius = cornerRadius;
+    button.clipsToBounds = YES;
+    return button;
+}
+
++ (instancetype)dh_buttonWithTitle:(NSString *)title
+                        titleColor:(UIColor*)titleColor
+                          fontSize:(NSInteger)fontSize {
+    return [self dh_buttonWithTitle:title titleColor:titleColor font:[UIFont systemFontOfSize:fontSize]];
+}
+
++ (instancetype)dh_buttonWithTitle:(NSString *)title
+                        titleColor:(UIColor *)titleColor
+                          fontSize:(NSInteger)fontSize
+                         imageName:(NSString *)imageName {
+    return [self dh_buttonWithTitle:title titleColor:titleColor font:[UIFont systemFontOfSize:fontSize] imageName:imageName];
 }
 
 + (instancetype)dh_buttonWithTitle:(NSString *)title
@@ -49,12 +80,7 @@
                           fontSize:(NSInteger)fontSize
                    backgroundColor:(UIColor*)backgroundColor
                       cornerRadius:(CGFloat)cornerRadius {
-    
-    UIButton *button = [self dh_buttonWithTitle:title titleColor:titleColor fontSize:fontSize];
-    button.backgroundColor = backgroundColor;
-    button.layer.cornerRadius = cornerRadius;
-    button.clipsToBounds = YES;
-    return button;
+    return [self dh_buttonWithTitle:title titleColor:titleColor font:[UIFont systemFontOfSize:fontSize] backgroundColor:backgroundColor cornerRadius:cornerRadius];
 }
 
 /**
@@ -85,7 +111,7 @@
     objc_setAssociatedObject(self, _cmd, [NSValue valueWithUIEdgeInsets:responseInsets], OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
-- (BOOL)pointInside:(CGPoint)point withEvent:(UIEvent *)event {
+- (BOOL)dh_pointInside:(CGPoint)point withEvent:(UIEvent *)event {
     if (UIEdgeInsetsEqualToEdgeInsets(UIEdgeInsetsZero, self.responseInsets)) {
         return [super pointInside:point withEvent:event];
     }
