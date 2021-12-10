@@ -2,7 +2,7 @@
 //  UILabel+DH.h
 //  DHExpand
 //
-//  Created by bangju on 2019/3/27.
+//  Created by duan on 2019/3/27.
 //  Copyright © 2019年 duan. All rights reserved.
 //
 
@@ -11,6 +11,10 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface UILabel (DH)
+
++ (instancetype)dh_labelWithTitle:(NSString *)title
+                        textColor:(UIColor *)textColor
+                             font:(UIFont *)font;
 
 + (instancetype)dh_labelWithTitle:(NSString *)title
                         textColor:(UIColor *)textColor
@@ -32,6 +36,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 /** 字间距 */
 - (void)dh_setWordSpacing:(CGFloat)wordSpacing;
+
+/** 行间距  段落间距 */
+- (void)dh_setLineSpacing:(CGFloat)lineSpacing paragraphSpacing:(CGFloat)paragraphSpacing;
+
+/** 行间距  段落间距  */
+- (void)dh_setLineSpacing:(CGFloat)lineSpacing paragraphSpacing:(CGFloat)paragraphSpacing range:(NSRange)range;
 
 @end
 

@@ -2,7 +2,7 @@
 //  DHUpdateApp.h
 //  DHExpand
 //
-//  Created by bangju on 2019/3/11.
+//  Created by duan on 2019/3/11.
 //  Copyright © 2019年 duan. All rights reserved.
 //
 
