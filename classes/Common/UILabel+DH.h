@@ -37,6 +37,12 @@ NS_ASSUME_NONNULL_BEGIN
 /** 字间距 */
 - (void)dh_setWordSpacing:(CGFloat)wordSpacing;
 
+/** 行间距  段落间距 */
+- (void)dh_setLineSpacing:(CGFloat)lineSpacing paragraphSpacing:(CGFloat)paragraphSpacing;
+
+/** 行间距  段落间距  */
+- (void)dh_setLineSpacing:(CGFloat)lineSpacing paragraphSpacing:(CGFloat)paragraphSpacing range:(NSRange)range;
+
 @end
 
 NS_ASSUME_NONNULL_END

@@ -61,12 +61,12 @@
     [self dh_setLineSpacing:lineSpacing paragraphSpacing:0 range:NSMakeRange(0, self.text.length)];
 }
 
-/** 垂直间距，行间距 */
+/** 行间距  段落间距 */
 - (void)dh_setLineSpacing:(CGFloat)lineSpacing paragraphSpacing:(CGFloat)paragraphSpacing {
     [self dh_setLineSpacing:lineSpacing paragraphSpacing:paragraphSpacing range:NSMakeRange(0, self.text.length)];
 }
 
-/** 垂直间距，行间距 */
+/** 行间距  段落间距  */
 - (void)dh_setLineSpacing:(CGFloat)lineSpacing paragraphSpacing:(CGFloat)paragraphSpacing range:(NSRange)range {
     NSMutableAttributedString *attributedString = [self dh_attributedText];
     NSMutableParagraphStyle *paragraphStyle = [NSMutableParagraphStyle new];
