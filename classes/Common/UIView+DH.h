@@ -14,6 +14,8 @@ typedef void (^DHTapGestureBlock)(UITapGestureRecognizer *tap);
 
 @interface UIView (DH)
 
++ (instancetype)viewWithColor:(UIColor *)color;
+
 - (void)dh_setCornerRadius:(CGFloat)cornerRadius;
 - (void)dh_setBorderColor:(UIColor*)borderColor;
 - (void)dh_setCornerRadius:(CGFloat)cornerRadius borderColor:(UIColor*)borderColor;
@@ -33,6 +35,10 @@ typedef void (^DHTapGestureBlock)(UITapGestureRecognizer *tap);
 
 /// 阴影
 @interface UIView (Layer)
+
+- (void)dh_setRoundingCorners:(UIRectCorner)corner cornerRadii:(CGFloat)cornerRadii;
+
+- (void)dh_setRoundingCorners:(UIRectCorner)corner cornerRadii:(CGFloat)cornerRadii roundedRect:(CGRect)rect;
 
 /// 添加阴影
 - (void)dh_setDefaultShadow;
@@ -80,6 +86,8 @@ typedef void (^DHTapGestureBlock)(UITapGestureRecognizer *tap);
 - (void)dh_addSubviews:(NSArray *)subviews;
 
 - (void)dh_removeAllSubviews;
+
+- (void)dh_addSubview:(UIView *)firstView, ... NS_REQUIRES_NIL_TERMINATION;
 
 @end
 

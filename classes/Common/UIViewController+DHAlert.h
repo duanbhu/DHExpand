@@ -65,15 +65,3 @@
          sureHandler:(void (^)(void))sureHandler;
 
 @end
-
-
-@interface NSObject(DH)
-
-/**
- 获取当前view controller
-
- @return 当前显示的view controller
- */
-- (UIViewController*)getCurrentVC;
-
-@end

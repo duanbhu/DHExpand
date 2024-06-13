@@ -16,10 +16,6 @@ NS_ASSUME_NONNULL_BEGIN
                         textColor:(UIColor *)textColor
                              font:(UIFont *)font;
 
-+ (instancetype)dh_labelWithTitle:(NSString *)title
-                        textColor:(UIColor *)textColor
-                         fontSize:(NSInteger)fontSize;
-
 - (NSMutableAttributedString *)dh_attributedText;
 
 /** 设置label的字体、颜色 */
@@ -42,6 +38,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 /** 行间距  段落间距  */
 - (void)dh_setLineSpacing:(CGFloat)lineSpacing paragraphSpacing:(CGFloat)paragraphSpacing range:(NSRange)range;
+
+- (void)dh_addAttribute:(NSAttributedStringKey)name value:(id)value range:(NSRange)range;
 
 @end
 

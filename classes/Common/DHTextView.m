@@ -22,6 +22,7 @@
 
 - (instancetype)initWithFrame:(CGRect)frame {
     if (self = [super initWithFrame:frame]) {
+//        self.autocapitalizationType = UITextAutocapitalizationTypeNone;
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(textViewDidChange) name:UITextViewTextDidChangeNotification object:self];
     }
     return self;
@@ -29,7 +30,6 @@
 
 - (void)layoutSubviews {
     [super layoutSubviews];
-    
     if (_placeholderLab) {
         UIEdgeInsets textContainerInset = self.textContainerInset;
         CGFloat lineFragmentPadding = self.textContainer.lineFragmentPadding;
@@ -42,7 +42,6 @@
 }
 
 - (void)textViewDidChange {
-    
     _placeholderLab.hidden = self.text.length;
     if (self.autoHeight) {
         CGSize size = [self sizeThatFits:CGSizeMake(CGRectGetWidth(self.frame), 0)];
@@ -83,7 +82,7 @@
         _placeholderLab = [UILabel new];
         _placeholderLab.textColor = [UIColor grayColor];
         _placeholderLab.font = self.font;
-        _placeholderLab.numberOfLines = 2;
+        _placeholderLab.numberOfLines = 0;
         [self addSubview:_placeholderLab];
     }
     return _placeholderLab;

@@ -12,12 +12,6 @@
 
 + (instancetype)dh_labelWithTitle:(NSString *)title
                         textColor:(UIColor *)textColor
-                         fontSize:(NSInteger)fontSize {
-    return [self dh_labelWithTitle:title textColor:textColor font:[UIFont systemFontOfSize:fontSize]];
-}
-
-+ (instancetype)dh_labelWithTitle:(NSString *)title
-                        textColor:(UIColor *)textColor
                              font:(UIFont *)font {
     UILabel *label = [[self alloc] init];
     label.text = title ;
@@ -53,6 +47,12 @@
 - (void)dh_setAttributedTextColor:(UIColor*)textColor range:(NSRange)range {
     NSMutableAttributedString *attributedString = [self dh_attributedText];
     [attributedString addAttribute:NSForegroundColorAttributeName value:textColor range:range];
+    self.attributedText = attributedString;
+}
+
+- (void)dh_addAttribute:(NSAttributedStringKey)name value:(id)value range:(NSRange)range {
+    NSMutableAttributedString *attributedString = [self dh_attributedText];
+    [attributedString addAttribute:name value:value range:range];
     self.attributedText = attributedString;
 }
 

@@ -10,6 +10,12 @@
 #import <objc/runtime.h>
 @implementation UIView (DH)
 
++ (instancetype)viewWithColor:(UIColor *)color {
+    UIView *line = [[self alloc] init];
+    line.backgroundColor = color;
+    return line;
+}
+
 - (void)dh_setCornerRadius:(CGFloat)cornerRadius {
     self.layer.cornerRadius = cornerRadius;
     self.clipsToBounds = cornerRadius > 0;
@@ -75,11 +81,11 @@
 @implementation UIView (Layer)
 
 - (void)dh_setDefaultShadow {
-    [self dh_setCornerRadius:6
-                 shadowColor:[UIColor colorWithWhite:0 alpha:0.05]
+    [self dh_setCornerRadius:4
+                 shadowColor:[UIColor colorWithRed:0/255.0 green:0/255.0 blue:0/255.0 alpha:0.1000]
                 shadowOffset:CGSizeMake(0,2)
                shadowOpacity:1
-                shadowRadius:4];
+                shadowRadius:1];
 }
 
 - (void)dh_setCornerRadius:(CGFloat)cornerRadius
@@ -153,6 +159,18 @@
     [self dh_setGradientHorWithframe:self.bounds colors:colors];
 }
 
+- (void)dh_setRoundingCorners:(UIRectCorner)corner cornerRadii:(CGFloat)cornerRadii {
+    CAShapeLayer *shapeLayer = [CAShapeLayer layer];
+    shapeLayer.path = [UIBezierPath bezierPathWithRoundedRect:self.bounds byRoundingCorners:corner cornerRadii:CGSizeMake(cornerRadii, cornerRadii)].CGPath;
+    self.layer.mask = shapeLayer;
+}
+
+- (void)dh_setRoundingCorners:(UIRectCorner)corner cornerRadii:(CGFloat)cornerRadii roundedRect:(CGRect)rect {
+    CAShapeLayer *shapeLayer = [CAShapeLayer layer];
+    shapeLayer.path = [UIBezierPath bezierPathWithRoundedRect:rect byRoundingCorners:corner cornerRadii:CGSizeMake(cornerRadii, cornerRadii)].CGPath;
+    self.layer.mask = shapeLayer;
+}
+
 @end
 
 @implementation UIView (Add)
@@ -161,6 +179,20 @@
     for (UIView *v in subviews) {
         [self addSubview:v];
     }
+}
+
+- (void)dh_addSubview:(UIView *)firstView, ... NS_REQUIRES_NIL_TERMINATION {
+    va_list list;
+    va_start(list, firstView);
+    [self addSubview:firstView];
+    while (YES) {
+        UIView *key = va_arg(list, UIView *);
+        [self addSubview:key];
+        if (!key) {
+            break;
+        }
+    }
+    va_end(list);
 }
 
 - (void)dh_removeAllSubviews {

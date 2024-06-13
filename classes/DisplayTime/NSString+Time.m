@@ -17,18 +17,15 @@
  @return 时间字符串
  */
 - (NSString *)dh_displayTime {
-    
     NSDateFormatter *fmt = [[NSDateFormatter alloc] init];
     NSCalendar *calendar = [NSCalendar calendar];
     fmt.dateFormat = @"yyyy-MM-dd HH:mm:ss";
     NSDate *createdAtDate =  [NSDate dateWithTimeIntervalSince1970:[self dateLine]];
-    
     if (createdAtDate.isToday) { // 今天
         // 手机当前时间
         NSDate *nowDate = [NSDate date];
         NSCalendarUnit unit = NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay | NSCalendarUnitHour | NSCalendarUnitMinute | NSCalendarUnitSecond;
         NSDateComponents *cmps = [calendar components:unit fromDate:createdAtDate toDate:nowDate options:0];
-        
         if (cmps.hour >= 1) {
             // 时间间隔 >= 1小时
             return [NSString stringWithFormat:@"%zd小时前", cmps.hour];
@@ -36,7 +33,6 @@
         } else if (cmps.minute >= 1) {
             // 1小时 > 时间间隔 >= 1分钟
             return [NSString stringWithFormat:@"%zd分钟前", cmps.minute];
-            
         } else {
             // 1分钟 > 分钟
             return @"刚刚";
@@ -45,7 +41,6 @@
         // 昨天
         fmt.dateFormat = @"昨天 HH:mm:ss";
         return [fmt stringFromDate:createdAtDate];
-        
     } else if (createdAtDate.isThisYear) {
         // 今年
         fmt.dateFormat = @"MM-dd HH:mm";
@@ -67,11 +62,9 @@
  @return 时间
  */
 - (NSString*)dh_becomeDateForWithFormat:(NSString*)dateFormat {
-    
     NSDateFormatter *fmt = [[NSDateFormatter alloc] init];
     fmt.dateFormat = dateFormat;
     NSDate *createdAtDate =  [NSDate dateWithTimeIntervalSince1970:[self dateLine]];
-    
     return [fmt stringFromDate:createdAtDate];
 }
 
@@ -86,10 +79,8 @@
 
 //获取当前时间戳(以毫秒为单位)
 + (NSString *)dh_getCurrentTimestamp {
-    
     NSDate *datenow = [NSDate date];
     NSString *timeSp = [NSString stringWithFormat:@"%ld", (long)[datenow timeIntervalSince1970] * 1000];
-    
     return timeSp;
 }
 
@@ -105,7 +96,6 @@
     int hours = totalSeconds / 3600;
     return [NSString stringWithFormat:@"%02d:%02d:%02d",hours, minutes, seconds];
 }
-
 
 // 在不同系统上，时间戳的位数不同（10位的和13位的）
 - (NSInteger)dateLine {

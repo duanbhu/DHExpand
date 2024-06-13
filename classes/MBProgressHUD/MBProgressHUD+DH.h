@@ -2,11 +2,18 @@
 //  MBProgressHUD+DH.h
 //  DHXuanWuJi
 //
-//  Created by 段波虎 on 2018/5/18.
+//  Created by Duanhu on 2018/5/18.
 //  Copyright © 2018年 duan. All rights reserved.
 //
 
 #import <MBProgressHUD/MBProgressHUD.h>
+
+typedef NS_ENUM(NSUInteger, DBHTipsStyle) {
+    DBHTipsStyleOnlyText = 0, // 只有文本提示
+    DBHTipsStyleIconSuccess, // 文字 + icon
+    DBHTipsStyleIconError,
+    DBHTipsStyleIconWarning,
+};
 
 @interface MBProgressHUD (DH)
 
@@ -35,6 +42,13 @@
 
 /**  提示文字，1s后会自动消失  */
 + (void)dh_showTipsMessage:(NSString*)message toView:(UIView*)view;
+
+/// 提示文字，1s后会自动消失
+/// - Parameters:
+///   - message: 提示文本
+///   - view: HUD 所在view
+///   - tipsStyle: 提示样式
++ (void)dh_showTipsMessage:(NSString *)message toView:(UIView *)view tipsStyle:(DBHTipsStyle)tipsStyle;
 
 /** 显示成功信息 1s后会自动消失 */
 + (void)dh_showSuccess:(NSString *)success toView:(UIView *)view;

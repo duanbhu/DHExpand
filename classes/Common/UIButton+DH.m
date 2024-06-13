@@ -11,12 +11,13 @@
 
 @interface UIButton()
 
+@property (nonatomic, strong) NSMutableDictionary  <NSNumber *, UIFont *>*titleFontDict;
+
 @property (nonatomic, strong) NSMutableDictionary  <NSNumber *, UIColor *>*backgroundColorDict;
 
 @property (nonatomic, strong) NSMutableDictionary  <NSNumber *, UIColor *>*borderColorDict;
 
 @end
-
 
 @implementation UIButton (DH)
 
@@ -62,27 +63,6 @@
     return button;
 }
 
-+ (instancetype)dh_buttonWithTitle:(NSString *)title
-                        titleColor:(UIColor*)titleColor
-                          fontSize:(NSInteger)fontSize {
-    return [self dh_buttonWithTitle:title titleColor:titleColor font:[UIFont systemFontOfSize:fontSize]];
-}
-
-+ (instancetype)dh_buttonWithTitle:(NSString *)title
-                        titleColor:(UIColor *)titleColor
-                          fontSize:(NSInteger)fontSize
-                         imageName:(NSString *)imageName {
-    return [self dh_buttonWithTitle:title titleColor:titleColor font:[UIFont systemFontOfSize:fontSize] imageName:imageName];
-}
-
-+ (instancetype)dh_buttonWithTitle:(NSString *)title
-                        titleColor:(UIColor*)titleColor
-                          fontSize:(NSInteger)fontSize
-                   backgroundColor:(UIColor*)backgroundColor
-                      cornerRadius:(CGFloat)cornerRadius {
-    return [self dh_buttonWithTitle:title titleColor:titleColor font:[UIFont systemFontOfSize:fontSize] backgroundColor:backgroundColor cornerRadius:cornerRadius];
-}
-
 /**
  UIControlEventTouchUpInside
  
@@ -124,6 +104,15 @@
 /** ======================================================================= */
 #pragma mark - public method
 
+- (void)dh_setTitleFont:(UIFont *)font forState:(UIControlState)state {
+    if (font) {
+        [self.titleFontDict setObject:font forKey:@(state)];
+    }
+    if (self.state == state) {
+        self.titleLabel.font = font;
+    }
+}
+
 - (void)dh_setBackgroundColor:(UIColor *)backgroundColor forState:(UIControlState)state {
     if (backgroundColor) {
         [self.backgroundColorDict setObject:backgroundColor forKey:@(state)];
@@ -156,6 +145,11 @@
 #pragma mark - private method
 - (void)updateButton {
     
+    UIFont *font = self.titleFontDict[@(self.state)];
+    if (font) {
+        self.titleLabel.font = font;
+    }
+    
     UIColor *backgroundColor = self.backgroundColorDict[@(self.state)];
     if (backgroundColor) {
         self.backgroundColor = backgroundColor;
@@ -185,6 +179,19 @@
 }
 
 #pragma mark - setter and getter
+// 存放文本色的字典
+- (NSMutableDictionary<NSNumber *,UIFont *> *)titleFontDict {
+    NSMutableDictionary *titleFontDict = objc_getAssociatedObject(self, _cmd);
+    if (!titleFontDict) {
+        titleFontDict = [NSMutableDictionary dictionary];
+        self.titleFontDict = titleFontDict;
+    }
+    return titleFontDict;
+}
+
+- (void)setTitleFontDict:(NSMutableDictionary<NSNumber *,UIFont *> *)titleFontDict {
+    objc_setAssociatedObject(self, @selector(titleFontDict), titleFontDict, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
 
 // 存放背景色的字典
 - (NSMutableDictionary<NSNumber *,UIColor *> *)backgroundColorDict {

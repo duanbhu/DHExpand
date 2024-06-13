@@ -18,21 +18,6 @@ typedef void (^DHTouchActionBlock)(void);
 @property (nonatomic, assign) UIEdgeInsets responseInsets;
 
 + (instancetype)dh_buttonWithTitle:(NSString *)title
-                        titleColor:(UIColor*)titleColor
-                          fontSize:(NSInteger)fontSize;
-
-+ (instancetype)dh_buttonWithTitle:(NSString *)title
-                        titleColor:(UIColor*)titleColor
-                          fontSize:(NSInteger)fontSize
-                         imageName:(NSString*)imageName;
-
-+ (instancetype)dh_buttonWithTitle:(NSString *)title
-                        titleColor:(UIColor*)titleColor
-                          fontSize:(NSInteger)fontSize
-                   backgroundColor:(UIColor*)backgroundColor
-                      cornerRadius:(CGFloat)cornerRadius;
-
-+ (instancetype)dh_buttonWithTitle:(NSString *)title
                         titleColor:(UIColor *)titleColor
                               font:(UIFont *)font;
 
@@ -46,11 +31,9 @@ typedef void (^DHTouchActionBlock)(void);
                               font:(UIFont *)font
                    backgroundColor:(UIColor*)backgroundColor
                       cornerRadius:(CGFloat)cornerRadius;
-/**
- UIControlEventTouchUpInside
 
- @param touchActionBlock 按钮点击的回调
- */
+/// UIControlEventTouchUpInside 点击事件
+/// - Parameter touchActionBlock: 按钮点击的回调
 - (void)dh_addTouchActionBlock:(DHTouchActionBlock)touchActionBlock ;
 
 - (void)dh_setBackgroundColor:(UIColor *)backgroundColor forState:(UIControlState)state;
@@ -58,7 +41,10 @@ typedef void (^DHTouchActionBlock)(void);
 // default is nil; state: normal/Highlighted/Disabled/Selected
 - (void)dh_setBorderColor:(UIColor *)borderColor forState:(UIControlState)state;
 
+- (void)dh_setTitleFont:(UIFont *)font forState:(UIControlState)state;
+
 - (UIColor *)dh_backgroundColorForState:(UIControlState)state;
+
 - (UIColor *)dh_borderColorForState:(UIControlState)state;
 
 @end
